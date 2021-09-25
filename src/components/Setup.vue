@@ -1,4 +1,5 @@
 <template>
+<h3>Rooms</h3>
   <table>
     <tr v-for="(v, i) in data" :key="i">
       <th>{{ v.id }}</th>
@@ -31,10 +32,7 @@ import("../css/style.css");
 const data = ref([]);
 const name = ref("");
 const get = () => db.get("rooms").then((res) => (data.value = res));
-const post = () =>
-  db
-    .post("rooms", Object.assign(new DTO.Room(), { name: name.value }))
-    .then(get);
+const post = () => db .post("rooms", Object.assign(new DTO.Room(), { name: name.value })) .then(get);
 const del = (o) => db.del("rooms", o).then(get);
 const put = (o) => db.put("rooms", o).then(get);
 

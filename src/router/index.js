@@ -5,6 +5,7 @@ import Home from '../components/Home.vue'
 import Setup from '../components/Setup.vue'
 import Staffs from '../components/Staffs.vue'
 import GlyphGenerator from '../components/GlyphGenerator.vue'
+import X from '../components/X.vue'
 import About from '../components/About.vue'
 
 const routes = [
@@ -27,6 +28,11 @@ const routes = [
         path: '/glyph-generator',
         name: 'GlyphGenerator',
         component: GlyphGenerator
+    },
+    {
+        path: '/x',
+        name: 'X',
+        component: X
     },
     {
         path: '/about',

@@ -81,10 +81,4 @@ setInterval(() => {
     top:5px;
     right:5px;
 }
-.clock:hover {
-  transform: scale(2.0);
-  right:2%;
-  top:3%;
-  transition-duration: .2s;
-}
 </style>
