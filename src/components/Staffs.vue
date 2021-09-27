@@ -1,8 +1,8 @@
 <template>
 
-<StaffCRUD title="Surgeons" dept="dr" />
-<StaffCRUD title="Hopitalist" dept="h" />
-<StaffCRUD title="Nurses" dept="rn" />
+<StaffCRUD title="Surgeons" dept="DR" />
+<StaffCRUD title="Hopitalist" dept="H" />
+<StaffCRUD title="Nurses" dept="RN" />
   
 </template>
 

@@ -6,6 +6,7 @@ import Setup from '../components/Setup.vue'
 import Staffs from '../components/Staffs.vue'
 import GlyphGenerator from '../components/GlyphGenerator.vue'
 import X from '../components/X.vue'
+import Version from '../components/Version.vue'
 import About from '../components/About.vue'
 
 const routes = [
@@ -38,6 +39,11 @@ const routes = [
         path: '/about',
         name: 'About',
         component: About
+    },
+    {
+        path: '/version',
+        name: 'Version',
+        component: Version
     },
 ]
 

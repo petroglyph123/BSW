@@ -10,13 +10,13 @@
       <td>{{ v.patient.disc.date.diff(v.patient.adm.date, "days") }}d</td>
       <td class=rrs :class=v.patient.rrs><RRS :room=v /></td>
       <td class=hlm><HLM :room=v /></td>
-      <td><StaffSelect :room=v dept='dr' /></td>
-      <td><StaffSelect :room=v dept='h' /></td>
-      <td><StaffSelect :room=v dept='rn' /></td>
-      <td><GlyphView :room=v glyph='anc' /></td>
-      <td><GlyphView :room=v glyph='barrier' /></td>
-      <td><GlyphView :room=v glyph='dc' /></td>
-      <td><GlyphView :room=v glyph='edu' /></td>
+      <td><StaffSelect :room=v dept='DR' /></td>
+      <td><StaffSelect :room=v dept='H' /></td>
+      <td><StaffSelect :room=v dept='RN' /></td>
+      <td><GlyphView :room=v glyph='ANC' /></td>
+      <td><GlyphView :room=v glyph='BARRIER' /></td>
+      <td><GlyphView :room=v glyph='DC' /></td>
+      <td><GlyphView :room=v glyph='EDU' /></td>
     </tr>
   </table>
   <Patient v-if="crud" :room="crud" @close="crud = null" />

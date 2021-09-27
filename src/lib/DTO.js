@@ -68,15 +68,15 @@ export class Patient {
         this.hlm = 1; // 1
         this.rrs = "l"; // low
         this.staffs = {
-            dr: new Staff(),
-            rn: new Staff(),
-            h: new Staff(),
+            DR: new Staff(),
+            RN: new Staff(),
+            H: new Staff(),
         }
         this.glyphs = {
-            anc: [],
-            barrier: [],
-            dc: [],
-            edu: [],
+            ANC: [],
+            BARRIER: [],
+            DC: [],
+            EDU: [],
         }
     }
     assign(src) {
@@ -112,4 +112,13 @@ export class Room {
         this.patient.assign(src.patient);
     }
 
+}
+
+export class Glyph {
+    constructor() {
+        this.type = '';
+        this.text = '';
+        this.fg = 'black';
+        this.bg = 'white';
+    }
 }

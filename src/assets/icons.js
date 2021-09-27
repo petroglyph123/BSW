@@ -5,7 +5,6 @@ export const defined_icons = [
 ,{type:'ANC', text: 'CCM ', fg:'black', bg: '#8497B0'}
 ,{type:'ANC', text: 'Nutrition', fg:'black', bg: '#F8CBAD'}
 ,{type:'ANC', text: 'SPC', fg:'black', bg: '#33CCCC'}
-,{type:'ANC', text: 'SPCXXXXXXX', fg:'black', bg: '#33CCCC'}
 ,{type:'DC', text: 'Rehab', fg:'white', bg: '#548235'}
 ,{type:'DC', text: 'SNF', fg:'white', bg: '#2F75B5'}
 ,{type:'DC', text: 'HHC', fg:'black', bg: '#FFFF66'}
@@ -15,7 +14,6 @@ export const defined_icons = [
 ,{type:'DC', text: 'HOS', fg:'white', bg: '#404040'}
 ,{type:'DC', text: 'TFR', fg:'black', bg: '#AEAAAA'}
 ,{type:'DC', text: 'COM ', fg:'black', bg: '#00B0F0'}
-,{type:'DC', text: 'COMXXXXX ', fg:'black', bg: '#00B0F0'}
 ,{type:'BARRIER', text: 'RED', fg:'black', bg: '#FF0000'}
 ,{type:'BARRIER', text: 'Foley', fg:'black', bg: '#FFFF00'}
 ,{type:'BARRIER', text: 'O2', fg:'black', bg: '#00B050'}
@@ -46,5 +44,4 @@ export const defined_icons = [
 ,{type:'EDU', text: 'THKA', fg:'white', bg: '#A6A6A6'}
 ,{type:'EDU', text: 'CVA', fg:'white', bg: '#CC00CC'}
 ,{type:'EDU', text: 'DM', fg:'white', bg: '#000000'}
-,{type:'EDU', text: 'DMXXXXXX', fg:'white', bg: '#000000'}
 ]
