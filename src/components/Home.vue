@@ -1,26 +1,7 @@
 <template>
   <table cellpadding="0" cellspacing="0">
     <tr>
-      <th
-        v-for="(v, i) in [
-          'Room',
-          'Patient',
-          'AO',
-          'ADM',
-          'DISC',
-          'ELOS',
-          'RRS',
-          'HLM',
-          'Surgeon',
-          'Hospitalist',
-          'RN',
-          'ANC',
-          'BARRIER',
-          'DC',
-          'EDU',
-        ]"
-        :key="i"
-      >
+      <th v-for="(v, i) in [ 'Room', 'Patient', 'AO', 'ADM', 'DISC', 'ELOS', 'RRS', 'HLM', 'Surgeon', 'Hospitalist', 'RN', 'ANC', 'BARRIER', 'DC', 'EDU', ]" :key="i" >
         {{ v }}
       </th>
     </tr>
@@ -32,9 +13,9 @@
         {{ v.patient.name.first }} {{ v.patient.name.last[0] }}
       </td>
       <td class="ao" :class="v.patient.ao"><AO :room="v" /></td>
-      <td>{{ v.patient.adm.date.format("dd M-D") }}</td>
-      <td>{{ v.patient.disc.date.format("dd M-D") }}</td>
-      <td>{{ v.patient.disc.date.diff(v.patient.adm.date, "days") }}d</td>
+      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("dd M-D") : '' }}</td>
+      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.format("dd M-D") : ''}}</td>
+      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.diff(v.patient.adm.date, "days")+'d' : '' }}</td>
       <td class="rrs" :class="v.patient.rrs"><RRS :room="v" /></td>
       <td class="hlm"><HLM :room="v" /></td>
       <td><StaffSelect :room="v" dept="DR" /></td>
@@ -47,36 +28,28 @@
     </tr>
   </table>
   <Patient v-if="crud" :room="crud" @close="crud = null" />
+  <div class=bottom>
   <table class="bottom">
     <tr>
       <th>Charge Nurse</th>
-      <td><StaffSelectStatic :config="config" dept="CN" /></td>
-    </tr>
-    <tr>
       <th>Unit Secretary</th>
-      <td><StaffSelectStatic :config="config" dept="US" /></td>
-    </tr>
-    <tr>
       <th>Case Manger</th>
-      <td><StaffSelectStatic :config="config" dept="CM" /></td>
-    </tr>
-    <tr>
       <th>Respiratory Therapist</th>
-      <td><StaffSelectStatic :config="config" dept="RT" /></td>
-    </tr>
-    <tr>
       <th>Social Worker</th>
-      <td><StaffSelectStatic :config="config" dept="SW" /></td>
-    </tr>
-    <tr>
       <th>Pharmacist</th>
-      <td><StaffSelectStatic :config="config" dept="RX" /></td>
+      <th>Night-Call Hospitalist</th>
     </tr>
     <tr>
-      <th>Night-Call Hospitalist</th>
-      <td><StaffSelectStatic :config="config" dept="NCH" /></td>
+      <td><StaffSelectStatic dept="CN" /></td>
+      <td><StaffSelectStatic dept="US" /></td>
+      <td><StaffSelectStatic dept="CM" /></td>
+      <td><StaffSelectStatic dept="RT" /></td>
+      <td><StaffSelectStatic dept="SW" /></td>
+      <td><StaffSelectStatic dept="RX" /></td>
+      <td><StaffSelectStatic dept="NCH" /></td>
     </tr>
   </table>
+  </div>
 </template>
 
 <script setup>
@@ -98,12 +71,6 @@ import("../css/style.css");
 const crud = ref(null);
 const glyph = ref(null);
 const data = ref([]);
-const config = ref({});
-
-db.get("configs").then((e) => {
-  config.value = e[0];
-  watch(config.value, (o, n) => db.put("configs", config.value));
-});
 
 const watcher = () => data.value.forEach((e) => watch(e, (o, n) => put(n)));
 const get = () =>
@@ -136,17 +103,25 @@ th {
   padding-right: 0.2em;
   text-align: center;
 }
-table.bottom {
+div.bottom {
   position: fixed;
-  left: 0px;
-  bottom: 0em;
+  display: flex;
+  bottom:.5em;
+  align-content: center;
+  align-items: center;
+  width: 100%;
 }
+
+table.bottom {
+  margin:auto auto;
+}
+
 table.bottom th {
-  text-align: right;
-  padding-right: 0.5em;
+  padding: 0.35em 0.35em;
   border: 1px solid lightgray;
 }
+
 table.bottom td {
-  text-align: left;
+  padding: 0.35em 0.35em;
 }
 </style>

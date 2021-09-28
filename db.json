@@ -18,14 +18,94 @@
   },
   "configs": [
     {
-      "id": 1,
-      "CN": 7,
-      "US": 9,
-      "CM": 11,
-      "RT": 12,
-      "SW": 13,
-      "RX": 14,
-      "NCH": 15
+      "id": "CN",
+      "staff": {
+        "id": 8,
+        "dept": "CN",
+        "name": {
+          "first": "Terry",
+          "last": "two",
+          "dirty": true
+        },
+        "pager": "11---22"
+      }
+    },
+    {
+      "id": "US",
+      "staff": {
+        "id": 9,
+        "dept": "US",
+        "name": {
+          "first": "James",
+          "last": "12",
+          "dirty": true
+        },
+        "pager": "1212-1212"
+      }
+    },
+    {
+      "id": "CM",
+      "staff": {
+        "id": 11,
+        "dept": "CM",
+        "name": {
+          "first": "Julie",
+          "last": "CM",
+          "dirty": true
+        },
+        "pager": "121-2121-"
+      }
+    },
+    {
+      "id": "RT",
+      "staff": {
+        "id": 12,
+        "dept": "RT",
+        "name": {
+          "first": "William",
+          "last": "RT1 ",
+          "dirty": true
+        },
+        "pager": "2121-1212"
+      }
+    },
+    {
+      "id": "NCH",
+      "staff": {
+        "id": 15,
+        "dept": "NCH",
+        "name": {
+          "first": "Angela",
+          "last": "last",
+          "dirty": true
+        },
+        "pager": "93-30003"
+      }
+    },
+    {
+      "id": "RX",
+      "staff": {
+        "id": 14,
+        "dept": "RX",
+        "name": {
+          "first": "RX Jonathan",
+          "last": "Fielder"
+        },
+        "pager": "1212"
+      }
+    },
+    {
+      "id": "SW",
+      "staff": {
+        "id": 13,
+        "dept": "SW",
+        "name": {
+          "first": "Terry",
+          "last": "sk",
+          "dirty": true
+        },
+        "pager": "00-12100"
+      }
     }
   ],
   "staffs": [
@@ -630,23 +710,23 @@
           "last": ""
         },
         "dob": {
-          "date": "2021-09-28T14:22:29.619Z",
+          "date": "2021-09-28T18:57:30.824Z",
           "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "adm": {
-          "date": "2021-09-28T14:22:29.619Z",
+          "date": "2021-09-28T18:57:30.824Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "disc": {
-          "date": "2021-09-29T14:22:29.619Z",
+          "date": "2021-09-29T18:57:30.824Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "ao": "",
-        "hlm": 1,
-        "rrs": "l",
+        "hlm": "",
+        "rrs": "",
         "staffs": {
           "DR": {
             "id": null,

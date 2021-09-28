@@ -1,8 +1,8 @@
 <template>
-  <div class=container>
-    <div>{{name(config[dept])}}</div>
-    <select v-model="config[dept]">
-      <option :value="v.id" v-for="(v, i) in data" :key="i">
+  <div class="container">
+    <div>{{ name() }}</div>
+    <select v-model="id" @change="change">
+      <option :value="v.id" v-for="(v, i) in staffs" :key="i">
         {{ v.name.first }} {{ v.pager }} [{{ v.id }}]
       </option>
     </select>
@@ -16,23 +16,48 @@ import * as DTO from "../lib/DTO";
 
 import("../css/style.css");
 
-const props = defineProps({ label: String, config: Object, dept: String })
+const props = defineProps({ dept: String });
+const id = ref(-1);
+const staffs = ref([]);
+const staff = ref({});
 
-const data = ref([]);
-
-const name = () => {
-  let index = data.value.findIndex(e => e.id === props.config[props.dept])
-  if (index === -1) return '';
-  return data.value[index].name.first + ' #' + data.value[index].pager;
+const post = () => {
+  db.post('configs', {id:props.dept, staff : new DTO.Staff()});
+  get_staff();
 }
 
-const get = () =>
+const get_staff = () =>
+  db
+    .get("configs")
+    .then((res) => res.filter((e) => e.id === props.dept))
+    .then((res) => { if (res.length === 0) post(); return staff.value =  res[0] } )
+    .then((res) => (id.value = staff.value?.staff?.id))
+    // .then((res) => console.log("get_staff", staff.value));
+get_staff();
+
+const get_staffs = () =>
   db
     .get("staffs")
     .then((res) => res.filter((e) => e.dept === props.dept))
-    .then((res) => (data.value = res));
+    .then((res) => (staffs.value = res))
+    // .then((res) => console.log("get_staffs", props.dept, staffs.value));
+get_staffs();
 
-get();
+const change = () => {
+  // console.log("change", props.dept, id.value);
+  staff.value = staffs.value.filter(e => e.id === id.value)[0];
+  let object = Object.assign({ id: props.dept }, { staff: staff.value});
+  // console.log('change object', object);
+  db.put("configs", object);
+};
+
+const name = () => {
+  if (id.value == -1) return "";
+  let index = staffs.value.findIndex((e) => e.id === id.value);
+  if (index === -1) return "";
+  staff.value = staffs.value[index];
+  return staff.value.name.first + " #" + staff.value.pager;
+};
 </script>
 
 <style scoped>

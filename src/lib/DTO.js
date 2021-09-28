@@ -67,8 +67,8 @@ export class Patient {
         this.disc = new DateTimeFormat();
         this.disc.date.add(1, 'days');
         this.ao = "";
-        this.hlm = 1; // 1
-        this.rrs = "l"; // low
+        this.hlm = ''; // 1
+        this.rrs = ""; // low
         this.staffs = {
             DR: new Staff(),
             RN: new Staff(),
