@@ -19,9 +19,9 @@
   "configs": [
     {
       "id": 1,
-      "CN": 8,
-      "US": 10,
-      "CM": 11,
+      "CN": 7,
+      "US": 9,
+      "CM": 16,
       "RT": 12,
       "SW": 13,
       "RX": 14,
@@ -175,6 +175,15 @@
         "last": "Goods"
       },
       "pager": "22-34343"
+    },
+    {
+      "id": 17,
+      "dept": "RN",
+      "name": {
+        "first": "very long first name",
+        "last": "short last name"
+      },
+      "pager": ""
     }
   ],
   "glyphs": [
@@ -613,7 +622,7 @@
     {
       "id": 1,
       "name": "101",
-      "color": "orange",
+      "color": "yellow",
       "patient": {
         "gender": "male",
         "name": {
@@ -636,11 +645,11 @@
           "color": ""
         },
         "ao": "O",
-        "hlm": 2,
-        "rrs": "M",
+        "hlm": 3,
+        "rrs": "H",
         "staffs": {
           "DR": {
-            "id": 2,
+            "id": 1,
             "dept": "",
             "name": {
               "first": "",
@@ -667,14 +676,15 @@
         "glyphs": {
           "ANC": [
             1,
-            5,
             3
           ],
           "BARRIER": [
             25,
             30,
             24,
-            22
+            22,
+            17,
+            14
           ],
           "DC": [
             2,

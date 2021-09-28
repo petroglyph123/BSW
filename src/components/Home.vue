@@ -136,12 +136,6 @@ th {
   padding-right: 0.2em;
   text-align: center;
 }
- td:hover select {
-  transition-duration: 0.2s;
-  transform: scale(1.5);
-  border: 1px solid lightgray;
-  border-radius: 5px 5px;
-} 
 table.bottom {
   position: fixed;
   left: 0px;
@@ -155,9 +149,4 @@ table.bottom th {
 table.bottom td {
   text-align: left;
 }
-
-td {
-  transition-duration: .2s;
-}
-
 </style>

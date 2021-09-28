@@ -18,14 +18,4 @@ const props = defineProps({ room: Object });
 </script>
 
 <style scoped>
-td:hover > div > select {
-  display: inline-block ;
-}
-select {
-  display: none;
-  text-align: center;
-}
-td:hover > div > div {
-  display: none;
-}
 </style>

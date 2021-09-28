@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class=container>
     <div>{{ name(room.patient.staffs[dept].id) }}</div>
-    <select class="no-arrow no-border" v-model="room.patient.staffs[dept].id">
+    <select v-model="room.patient.staffs[dept].id">
       <option :value="v.id" v-for="(v, i) in data" :key="i">
         {{ v.name.first }} {{ v.name.last }}
       </option>
@@ -45,14 +45,4 @@ get();
 </script>
 
 <style scoped>
-td:hover > div > select {
-  display: inline-block;
-}
-select {
-  display: none;
-  text-align: center;
-}
-td:hover > div > div {
-  display: none;
-}
 </style>
