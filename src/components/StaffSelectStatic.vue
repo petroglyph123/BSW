@@ -32,7 +32,6 @@ const get_staff = () =>
     .then((res) => res.filter((e) => e.id === props.dept))
     .then((res) => { if (res.length === 0) post(); return staff.value =  res[0] } )
     .then((res) => (id.value = staff.value?.staff?.id))
-    // .then((res) => console.log("get_staff", staff.value));
 get_staff();
 
 const get_staffs = () =>
@@ -40,14 +39,11 @@ const get_staffs = () =>
     .get("staffs")
     .then((res) => res.filter((e) => e.dept === props.dept))
     .then((res) => (staffs.value = res))
-    // .then((res) => console.log("get_staffs", props.dept, staffs.value));
 get_staffs();
 
 const change = () => {
-  // console.log("change", props.dept, id.value);
   staff.value = staffs.value.filter(e => e.id === id.value)[0];
   let object = Object.assign({ id: props.dept }, { staff: staff.value});
-  // console.log('change object', object);
   db.put("configs", object);
 };
 

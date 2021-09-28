@@ -8,13 +8,7 @@
   <div class="flex">
     <div>
       <select v-model="glyph.type">
-        <option
-          :value="v"
-          v-for="(v, i) in ['ANC', 'BARRIER', 'DC', 'EDU']"
-          :key="i"
-        >
-          {{ v }}
-        </option>
+        <option :value="v" v-for="(v, i) in ['ANC', 'BARRIER', 'DC', 'EDU']" :key="i" > {{ v }} </option>
       </select>
     </div>
     <div>
@@ -22,25 +16,11 @@
     </div>
     <div>
       <select v-model="glyph.fg">
-        <option
-          :value="v"
-          v-for="(v, i) in new Set(glyphs.map((e) => e.fg))"
-          :key="i"
-        >
-          {{ v }}
-        </option>
-      </select>
+        <option :value="v" v-for="(v, i) in new Set(glyphs.map((e) => e.fg))" :key="i" > {{ v }} </option> </select>
     </div>
     <div>
       <select v-model="glyph.bg">
-        <option
-          :value="v.bg"
-          v-for="(v, i) in glyphs"
-          :key="i"
-          :style="{ 'background-color': v.bg, color: v.fg }"
-        >
-          {{ v.bg }}
-        </option>
+        <option :value="v.bg" v-for="(v, i) in glyphs" :key="i" :style="{ 'background-color': v.bg, color: v.fg }" > {{ v.bg }} </option>
       </select>
     </div>
     <div>
@@ -103,7 +83,7 @@ img {
   height: 64px;
   box-shadow: 10px 10px 10px gray;
   border-radius: 5px 5px;
-  margin: 0.25em 0.25em;
+  margin: 0.5em 0.5em;
   transition-duration: 0.2s;
 }
 img:hover {

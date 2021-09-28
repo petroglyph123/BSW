@@ -50,10 +50,11 @@
     </tr>
   </table>
   </div>
+  <button id=f11 class=f11 @click="toggle_fullscreen">full screen</button>
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 import * as db from "../lib/db";
 import * as DTO from "../lib/DTO";
 import RoomColor from "./RoomColor.vue";
@@ -71,6 +72,7 @@ import("../css/style.css");
 const crud = ref(null);
 const glyph = ref(null);
 const data = ref([]);
+const fullscreen = ref(true)
 
 const watcher = () => data.value.forEach((e) => watch(e, (o, n) => put(n)));
 const get = () =>
@@ -83,6 +85,21 @@ const put = (o) => db.put("rooms", o).then(get);
 
 // init
 get();
+
+console.log( document.fullscreenEnabled);
+// document.documentElement.requestFullscreen();
+
+const toggle_fullscreen = () => {
+  if (fullscreen.value) {
+    document.documentElement.requestFullscreen({ navigationUI: "show" }).then(() => { console.log('fullscreen')}).catch(err => {
+      alert(`An error occurred while trying to switch into full-screen mode: ${err.message} (${err.name})`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+  fullscreen.value = !fullscreen.value;
+}
+
 </script>
 
 <style scoped>
@@ -115,13 +132,16 @@ div.bottom {
 table.bottom {
   margin:auto auto;
 }
-
 table.bottom th {
   padding: 0.35em 0.35em;
   border: 1px solid lightgray;
 }
-
 table.bottom td {
   padding: 0.35em 0.35em;
+}
+button.f11 {
+  position:fixed;
+  bottom:1em;
+  right:1em;
 }
 </style>

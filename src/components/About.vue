@@ -1,12 +1,5 @@
 <template>
   <div class=comments>
-    <ul>
-      <li> main Board glyph size <br>
-      GlyphView.vue <br>
-      <a href="./GlyphView.vue">GlyphView.vue</a><br>
-      style .container: height:{nn}px
-      </li>
-      </ul>
   </div>
 </template>
 

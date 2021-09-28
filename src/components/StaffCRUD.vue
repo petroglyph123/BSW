@@ -21,16 +21,10 @@
         <input type="text" v-model="new_staff.pager" placeholder="pager" v-if=pager />
       </td>
       <td>
-        <button
-          @click="post"
-          :disabled="!new_staff.name.first || !new_staff.name.last"
-        >
-          add
-        </button>
+        <button @click="post" :disabled="!new_staff.name.first || !new_staff.name.last" > add </button>
       </td>
     </tr>
   </table>
-  {{pager}}
 </template>
 
 <script setup>
