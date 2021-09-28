@@ -68,18 +68,27 @@ table.margin-auto {
 td > div.container {
   position: relative;
 }
-td:hover > div.continer > div {
+
+td > div.container > div {
+  opacity: 1;
+}
+
+td:hover > div.container > div {
   opacity: 0;
 }
-td:hover > div.container > select {
-  opacity: 1;
-  z-index: 1;
-}
+
 td > div.container > select {
   opacity: 0;
   position: absolute;
   top: 0px;
   left: 0px;
   font-size: 1em;
-  min-width:100%;
+  transform: scale(0);
+}
+
+td:hover > div.container > select {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+  transition-duration: .4s;
 }

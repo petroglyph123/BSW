@@ -21,7 +21,7 @@
       "id": 1,
       "CN": 7,
       "US": 9,
-      "CM": 16,
+      "CM": 11,
       "RT": 12,
       "SW": 13,
       "RX": 14,
@@ -622,78 +622,65 @@
     {
       "id": 1,
       "name": "101",
-      "color": "yellow",
+      "color": "red",
       "patient": {
-        "gender": "male",
+        "gender": "",
         "name": {
-          "first": "John",
-          "last": "Doe"
+          "first": "",
+          "last": ""
         },
         "dob": {
-          "date": "1990-01-20T06:00:00.000Z",
+          "date": "2021-09-28T14:22:29.619Z",
           "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "adm": {
-          "date": "2021-09-24T16:34:00.000Z",
+          "date": "2021-09-28T14:22:29.619Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "disc": {
-          "date": "2021-09-29T16:34:00.000Z",
+          "date": "2021-09-29T14:22:29.619Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
-        "ao": "O",
-        "hlm": 3,
-        "rrs": "H",
+        "ao": "",
+        "hlm": 1,
+        "rrs": "l",
         "staffs": {
           "DR": {
-            "id": 1,
+            "id": null,
             "dept": "",
             "name": {
               "first": "",
               "last": ""
-            }
+            },
+            "pager": ""
           },
           "RN": {
-            "id": 5,
+            "id": null,
             "dept": "",
             "name": {
               "first": "",
               "last": ""
-            }
+            },
+            "pager": ""
           },
           "H": {
-            "id": 3,
+            "id": null,
             "dept": "",
             "name": {
               "first": "",
               "last": ""
-            }
+            },
+            "pager": ""
           }
         },
         "glyphs": {
-          "ANC": [
-            1,
-            3
-          ],
-          "BARRIER": [
-            25,
-            30,
-            24,
-            22,
-            17,
-            14
-          ],
-          "DC": [
-            2,
-            13
-          ],
-          "EDU": [
-            37,
-            39
-          ]
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
         }
       }
     }

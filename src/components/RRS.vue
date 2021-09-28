@@ -1,9 +1,9 @@
 <template>
 <div class=container>
   <div>{{room.patient.rrs}}</div>
-  <select class="rrs no-border no-arrow" :class=room.patient.rrs v-model="room.patient.rrs">
-    <option class=rrs :class=v :value="v" v-for="(v, i) in ['VH','H','M','L']" :key="i">
-      {{v}}
+  <select class=room.patient.rrs v-model="room.patient.rrs">
+    <option class=rrs :class="v.value" :value="v.value" v-for="(v, i) in options" :key="i">
+      {{v.name}}
     </option>
   </select>
 </div>
@@ -15,6 +15,7 @@ import * as db from "../lib/db";
 import("../css/style.css");
 
 const props = defineProps({ room: Object });
+const options = ref([{name:'Very High', value:'VH'}, {name:'High', value:'H'},{name:'Medium', value:'M'},{name:'Low',value:'L'}])
 </script>
 
 <style scoped>

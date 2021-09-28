@@ -15,22 +15,12 @@
         <tr>
           <th rowspan="2">name</th>
           <td>
-            <input
-              type="text"
-              :class="room.patient.gender"
-              v-model="room.patient.name.first"
-              placeholder="first"
-            />
+            <input type="text" :class="room.patient.gender" v-model="room.patient.name.first" placeholder="first" />
           </td>
         </tr>
         <tr>
           <td>
-            <input
-              type="text"
-              :class="room.patient.gender"
-              v-model="room.patient.name.last"
-              placeholder="last"
-            />
+            <input type="text" :class="room.patient.gender" v-model="room.patient.name.last" placeholder="last" />
           </td>
         </tr>
         <tr>
@@ -52,6 +42,7 @@
           </td>
         </tr>
       </table>
+    <button @click=discharge>Discharge</button>
     </div>
   </div>
 </template>
@@ -59,21 +50,26 @@
 <script setup>
 import { ref } from "vue";
 import * as db from "../lib/db";
+import * as DTO from "../lib/DTO";
 import("../css/style.css");
 
 const props = defineProps({ room: Object });
 const emits = defineEmits(["close"]);
+const discharge = () => {
+  props.room.discharge();
+}
+
 </script>
 
 <style scoped>
 h1, h2, h3, h4 {
   border-radius: 3px 3px;
+  border:1px solid lightgray;
 }
 input,select {
   font-size: 1em;
   border:1px solid lightgray;
   margin:.125em;
-  border-radius: 5px 5px;
 }
 
 table {

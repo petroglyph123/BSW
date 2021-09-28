@@ -113,6 +113,10 @@ export class Room {
         this.color = src.color;
         this.patient.assign(src.patient);
     }
+    discharge() {
+        this.patient = new Patient();
+        this.color = "red";
+    }
 
 }
 

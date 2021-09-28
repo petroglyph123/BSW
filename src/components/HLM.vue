@@ -1,7 +1,7 @@
 <template>
   <div class=container>
     <div> {{ room.patient.hlm }} </div>
-    <select v-model="room.patient.hlm" class="no-arrow no-border">
+    <select v-model="room.patient.hlm">
       <option :value="i + 1" v-for="(v, i) in Array(8).fill()" :key="i">
         {{ i + 1 }}
       </option>

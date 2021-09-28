@@ -1,7 +1,7 @@
 <template>
   <div class=container>
     <div>{{name(config[dept])}}</div>
-    <select class="no-arrow no-border" v-model="config[dept]">
+    <select v-model="config[dept]">
       <option :value="v.id" v-for="(v, i) in data" :key="i">
         {{ v.name.first }} {{ v.pager }} [{{ v.id }}]
       </option>

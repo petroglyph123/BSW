@@ -139,7 +139,7 @@ th {
 table.bottom {
   position: fixed;
   left: 0px;
-  bottom: 2em;
+  bottom: 0em;
 }
 table.bottom th {
   text-align: right;

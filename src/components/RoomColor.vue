@@ -1,7 +1,7 @@
 <template>
   <div class=container>
     <div>{{ room.name }}</div>
-    <select class="no-border no-arrow room-color" v-model="room.color" :class="room.color" >
+    <select v-model="room.color" :class="room.color" >
       <option v-for="(v, i) in colors" :key="i" :value="v" class="room-color" :class="v" >
         {{ room.name }}
       </option>
