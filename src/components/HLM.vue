@@ -1,9 +1,14 @@
 <template>
-  <select v-model="room.patient.hlm" class="no-arrow no-border">
-    <option :value="i + 1" v-for="(v, i) in Array(8).fill()" :key="i">
-      {{ i + 1 }}
-    </option>
-  </select>
+  <div>
+    <div>
+      {{ room.patient.hlm }}
+    </div>
+    <select v-model="room.patient.hlm" class="no-arrow no-border">
+      <option :value="i + 1" v-for="(v, i) in Array(8).fill()" :key="i">
+        {{ i + 1 }}
+      </option>
+    </select>
+  </div>
 </template>
 
 <script setup>
@@ -15,10 +20,14 @@ const props = defineProps({ room: Object });
 </script>
 
 <style scoped>
-select {
-    text-align: center;
+td:hover > div > select {
+  display: inline-block ;
 }
-* {
-  font-size: 1em;;
+select {
+  display: none;
+  text-align: center;
+}
+td:hover > div > div {
+  display: none;
 }
 </style>

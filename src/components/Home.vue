@@ -143,7 +143,7 @@ th {
   border-radius: 5px 5px;
 } 
 table.bottom {
-  position: absolute;
+  position: fixed;
   left: 0px;
   bottom: 2em;
 }
@@ -155,4 +155,9 @@ table.bottom th {
 table.bottom td {
   text-align: left;
 }
+
+td {
+  transition-duration: .2s;
+}
+
 </style>

@@ -1,9 +1,12 @@
 <template>
+<div class=container>
+  <div>{{room.patient.ao}}</div>
   <select v-model="room.patient.ao" class="ao no-arrow no-border">
     <option :value="v" v-for="(v, i) in ['', 'A', 'O']" :key="i">
       {{ v }}
     </option>
   </select>
+</div>
 </template>
 
 <script setup>
@@ -15,10 +18,14 @@ const props = defineProps({ room: Object });
 </script>
 
 <style scoped>
+td:hover > div > select {
+  display: inline-block ;
+}
 select {
-    text-align: center;
-    width:100%;
-    height:100%;
-    outline: none;
+  display: none;
+  text-align: center;
+}
+td:hover > div > div {
+  display: none;
 }
 </style>

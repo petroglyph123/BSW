@@ -1,9 +1,12 @@
 <template>
-  <select class="no-arrow no-border" v-model="room.patient.staffs[dept].id">
-    <option :value="v.id" v-for="(v, i) in data" :key="i">
-      {{ name(v) }}
-    </option>
-  </select>
+  <div>
+    <div>{{ name(room.patient.staffs[dept].id) }}</div>
+    <select class="no-arrow no-border" v-model="room.patient.staffs[dept].id">
+      <option :value="v.id" v-for="(v, i) in data" :key="i">
+        {{ v.name.first }} {{ v.name.last }}
+      </option>
+    </select>
+  </div>
 </template>
 
 <script setup>
@@ -17,7 +20,10 @@ const props = defineProps({ room: Object, dept: String });
 
 const data = ref([]);
 
-const name = (staff) => {
+const name = (id) => {
+  let index = data.value.findIndex((e) => e.id === id);
+  if (index === -1) return "";
+  let staff = data.value[index];
   switch (staff.dept) {
     case "DR":
     case "H":
@@ -39,12 +45,14 @@ get();
 </script>
 
 <style scoped>
-* {
-  font-size: 1em;
+td:hover > div > select {
+  display: inline-block;
 }
 select {
-  outline: none;
-  width: 100%;;
-  height: 100%;;
+  display: none;
+  text-align: center;
+}
+td:hover > div > div {
+  display: none;
 }
 </style>
