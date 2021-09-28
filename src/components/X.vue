@@ -1,11 +1,6 @@
 <template>
   <select v-model="i" @change="go(i)">
-    <option
-      :value="i"
-      v-for="(v, i) in icons"
-      :key="i"
-      :style="{ 'background-color': v.bg, color: v.fg }"
-    >
+    <option :value="i" v-for="(v, i) in icons" :key="i" :style="{ 'background-color': v.bg, color: v.fg }" >
     {{v.id}} {{ v.type }} {{ v.text }}
     </option>
   </select>
@@ -17,11 +12,7 @@
     <tr>
       <td>
         <select v-model="glyph.type">
-          <option
-            :value="v"
-            v-for="(v, i) in ['ANC', 'BARRIER', 'DC', 'EDU']"
-            :key="i"
-          >
+          <option :value="v" v-for="(v, i) in ['ANC', 'BARRIER', 'DC', 'EDU']" :key="i" >
             {{ v }}
           </option>
         </select>
@@ -35,8 +26,8 @@
     <tr>
       <td>
         <select v-model="glyph.fg">
-          <option :value="v.fg" v-for="(v, i) in icons" :key="i">
-            {{ v.fg }}
+          <option :value="v" v-for="(v, i) in (new Set(icons.map(e => e.fg)))" :key="i">
+            {{ v }}
           </option>
         </select>
       </td>
@@ -44,15 +35,16 @@
     <tr>
       <td>
         <select v-model="glyph.bg">
-          <option
-            :value="v.bg"
-            v-for="(v, i) in icons"
-            :key="i"
-            :style="{ 'background-color': v.bg, color: v.fg }"
-          >
+          <option :value="v.bg" v-for="(v, i) in icons" :key="i" :style="{ 'background-color': v.bg, color: v.fg }" >
             {{ v.bg }}
           </option>
         </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button @click="put">update ({{glyph.id}})</button>
+        <button @click="post">insert</button>
       </td>
     </tr>
   </table>
@@ -79,31 +71,28 @@ const i = ref(0);
 const glyph = ref(new DTO.Glyph());
 
 const sync_id = (data) => {
-  console.log(data);
-  console.log(icons.value)
   icons.value.forEach((icon) => {
-    icon.id = data.findIndex(
-      (d) =>
-        d.type === icon.type &&
-        d.text === icon.text
-    );
-    if (icon.id === -1) icon.id = null;
-    else icon.id = data[icon.id].id;
-    console.log(icon.id);
+    icon.id = data.findIndex( (d) => d.type === icon.type && d.text === icon.text);
+    if (icon.id === -1) icon.id = null; else icon.id = data[icon.id].id;
   });
 };
 
-db.get("glyphs").then(sync_id);
+const get = () => db.get("glyphs").then(sync_id)
+
+get();
 
 watch(glyph.value, (o, n) => draw.draw("canvas", glyph.value));
 
 const go = (i) => {
   Object.assign(glyph.value, icons.value[i]);
-  // console.log(i, glyph.value);
-  // draw.draw("canvas", icons.value[i])
   draw.draw("canvas", glyph.value);
-  // console.log(glyph.value);
 };
+
+const post = () => db.post('glyphs', Object.assign({}, glyph.value, {id:null})).then(get)
+const put = () => db.put('glyphs', glyph.value).then(get)
+
+
+
 </script>
 
 <style scoped>

@@ -25,7 +25,7 @@ select {
   width: 100%;
   outline: none;
 }
-select:hover {
+/* select:hover {
   transform: scale(2.0);
-}
+} */
 </style>

@@ -22,25 +22,20 @@ pre {
   border: 0px solid transparent;
 }
 
-select.no-arrow {
-  width: 100%;
-  height: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 .rrs.VH {
   background-color: red;
   color: white;
 }
+
 .rrs.H {
   background-color: orange;
   color: white;
 }
+
 .rrs.M {
   background-color: yellow;
 }
+
 .rrs.L {
   background-color: green;
   color: white;
@@ -58,14 +53,17 @@ table.margin-auto {
   background-color: white;
   color: black;
 }
+
 .room-color.yellow {
   background-color: yellow;
   color: black;
 }
+
 .room-color.orange {
   background-color: orange;
   color: white;
 }
+
 .room-color.red {
   background-color: red;
   color: white;

@@ -19,8 +19,8 @@ const data = ref([]);
 
 const name = (staff) => {
   switch (staff.dept) {
-    case "dr":
-    case "h":
+    case "DR":
+    case "H":
       return staff.name.last;
       break;
     default:
@@ -44,5 +44,7 @@ get();
 }
 select {
   outline: none;
+  width: 100%;;
+  height: 100%;;
 }
 </style>

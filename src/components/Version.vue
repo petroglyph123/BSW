@@ -1,5 +1,13 @@
 <template>
   <div class="comments">
+    <h2>Bottom left static</h2>
+    <li>Charge Nurse</li>
+    <li>Unit Secretary </li>
+    <li>Case Manager</li>
+    <li>Respiratory Therapist</li>
+    <li>Social Worker</li>
+    <li>Pharmacist</li>
+    <li>Night-Call Hospitalist</li>
     <h2>Conference call notes</h2>
     <h3>2021-09-22</h3>
     <h4>Pat Cooper, Candace Hamilton, Gary Yi</h4>
@@ -21,7 +29,7 @@
     <li class=completed>Glyph remove "X" - toggle between boxes top and bottom(green)</li>
     <li class=completed>upper right hand analog clock preferred.</li>
     <li>bottom contact - TBD waiting for documents/pics</li>
-    <li>discharge patient - TBD. waiting Candace to send pics</li>
+    <li>discharge patient - TBD. waiting Candace to send pics - set to "red" dirty</li>
   </div>
 </template>
 

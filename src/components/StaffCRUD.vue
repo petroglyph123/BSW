@@ -1,14 +1,15 @@
 <template>
-<h3>{{title}}</h3>
+  <h3>{{ title }}</h3>
   <table class="margin-auto">
     <tr v-for="(v, i) in data" :key="i">
       <th>{{ v.id }}</th>
       <td>
-        <input type="text" v-model="v.name.first" placeholder="first" @input="v.name.dirty=true" />
-        <input type="text" v-model="v.name.last" placeholder="last" @input="v.name.dirty=true" />
+        <input type="text" v-model="v.name.first" placeholder="first" @input="v.name.dirty = true" />
+        <input type="text" v-model="v.name.last" placeholder="last" @input="v.name.dirty = true" />
+        <input type="text" v-model="v.pager" placeholder="pager" @input="v.name.dirty = true" v-if=v.pager />
       </td>
       <td>
-        <button @click="put(v)" :disabled=!v.name.dirty>update</button>
+        <button @click="put(v)" :disabled="!v.name.dirty">update</button>
         <button @click="del(v)">delete</button>
       </td>
     </tr>
@@ -17,10 +18,19 @@
       <td>
         <input type="text" v-model="new_staff.name.first" placeholder="first" />
         <input type="text" v-model="new_staff.name.last" placeholder="last" />
+        <input type="text" v-model="new_staff.pager" placeholder="pager" v-if=pager />
       </td>
-      <td><button @click="post" :disabled="!new_staff.name.first || !new_staff.name.last">add</button></td>
+      <td>
+        <button
+          @click="post"
+          :disabled="!new_staff.name.first || !new_staff.name.last"
+        >
+          add
+        </button>
+      </td>
     </tr>
   </table>
+  {{pager}}
 </template>
 
 <script setup>
@@ -30,7 +40,7 @@ import * as DTO from "../lib/DTO";
 
 import ('../css/style.css')
 
-const props = defineProps({ title: String, dept: String });
+const props = defineProps({ title: String, dept: String, pager:Boolean });
 
 const new_staff = ref(new DTO.Staff());
 new_staff.value.dept = props.dept;
@@ -54,7 +64,7 @@ get();
 <style scoped>
 input {
   font-size: 1em;
-  border:1px solid lightgray;
+  border: 1px solid lightgray;
   border-radius: 3px 3px;
 }
 button {

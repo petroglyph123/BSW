@@ -18,11 +18,13 @@ export class Staff {
         this.id = null;
         this.dept = "";
         this.name = new Name();
+        this.pager = "";
     }
     assign(src) {
         this.id = src.id;
         this.dept = src.dept;
         this.name.assign(src.name);
+        this.pager = src.pager || "";
     }
 }
 

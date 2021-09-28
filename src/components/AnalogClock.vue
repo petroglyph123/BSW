@@ -80,5 +80,6 @@ setInterval(() => {
     position:fixed;
     top:5px;
     right:5px;
+    z-index: -1;
 }
 </style>
