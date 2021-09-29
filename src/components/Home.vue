@@ -50,7 +50,9 @@
     </tr>
   </table>
   </div>
+  <ScreenLock :show=lock />
   <button id=f11 class=f11 @click="toggle_fullscreen">full screen</button>
+  <button id=lock class=lock @click="toggle_screenlock" :class="{locked: lock}">screen {{lock ? "locked" : "unlocked"}}</button>
 </template>
 
 <script setup>
@@ -66,6 +68,7 @@ import StaffSelect from "./StaffSelect.vue";
 import StaffSelectStatic from "./StaffSelectStatic.vue";
 import AnalogClock from "./AnalogClock.vue";
 import GlyphView from "./GlyphView.vue";
+import ScreenLock from "./ScreenLock.vue";
 
 import("../css/style.css");
 
@@ -73,6 +76,7 @@ const crud = ref(null);
 const glyph = ref(null);
 const data = ref([]);
 const fullscreen = ref(true)
+const lock = ref(false);
 
 const watcher = () => data.value.forEach((e) => watch(e, (o, n) => put(n)));
 const get = () =>
@@ -98,6 +102,10 @@ const toggle_fullscreen = () => {
     document.exitFullscreen();
   }
   fullscreen.value = !fullscreen.value;
+}
+
+const toggle_screenlock = () => {
+  lock.value = !lock.value;
 }
 
 </script>
@@ -143,5 +151,14 @@ button.f11 {
   position:fixed;
   bottom:1em;
   right:1em;
+}
+button.lock {
+  position: fixed;
+  bottom:3em;
+  right:1em;
+  z-index:1000;
+}
+button.lock.locked {
+  color:red;
 }
 </style>
