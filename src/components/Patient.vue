@@ -109,4 +109,9 @@ button {
   box-shadow: 10px 10px 10px gray;
 
 }
+
+input {
+  font-size: 1em;;
+
+}
 </style>

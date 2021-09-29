@@ -90,7 +90,7 @@ const put = (o) => db.put("rooms", o).then(get);
 // init
 get();
 
-console.log( document.fullscreenEnabled);
+console.log('document.fullscreenEnabled', document.fullscreenEnabled);
 // document.documentElement.requestFullscreen();
 
 const toggle_fullscreen = () => {

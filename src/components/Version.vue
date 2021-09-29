@@ -42,11 +42,4 @@
   margin: auto auto;
   display: inline-block;
 }
-li {
-  color:red;
-}
-.completed {
-  text-decoration: line-through;
-  color:green;
-}
 </style>
