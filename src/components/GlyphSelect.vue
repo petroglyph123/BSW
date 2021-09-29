@@ -54,6 +54,7 @@ get();
   width: 100%;
   height: 100%;
   background-color: rgba(128, 128, 128, 0.5);
+  z-index:1000;
 }
 div.not-selected, div.selected {
   background-color: white;
