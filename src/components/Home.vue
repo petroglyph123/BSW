@@ -50,7 +50,7 @@
     </tr>
   </table>
   </div>
-  <ScreenLock :show=lock />
+  <ScreenLock v-if=lock @close="lock=false" />
   <button id=f11 class=f11 @click="toggle_fullscreen">full screen</button>
   <button id=lock class=lock @click="toggle_screenlock" :class="{locked: lock}">screen {{lock ? "locked" : "unlocked"}}</button>
 </template>
@@ -156,9 +156,11 @@ button.lock {
   position: fixed;
   bottom:3em;
   right:1em;
-  z-index:1000;
+  /* z-index:1000; */
+  color:green;
 }
 button.lock.locked {
   color:red;
+  font-weight: 900;
 }
 </style>
