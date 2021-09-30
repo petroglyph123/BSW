@@ -1,7 +1,7 @@
 <template>
   <table cellpadding="0" cellspacing="0">
     <tr>
-      <th v-for="(v, i) in [ 'Room', 'Patient', 'AO', 'ADM', 'DISC', 'ELOS', 'RRS', 'HLM', 'Surgeon', 'Hospitalist', 'RN', 'ANC', 'BARRIER', 'DC', 'EDU', ]" :key="i" @click=sort(v,i) :class="{sorted: v==sort_by.name, desc:sort_by.asc == -1}" > {{ v }} </th>
+      <th v-for="(v, i) in [ 'Room', 'Patient', 'AO', 'ADM', 'DISC', 'ELOS', 'RRS', 'HLM', 'Surgeon', 'Hospitalist', 'RN', 'ANC', 'BARRIER', 'DC', 'EDU', ]" :key="i" @click=sort(v,true) :class="{sorted: v==sort_by.name, desc:sort_by.asc == -1}" > {{ v }} </th>
     </tr>
     <tr v-for="(v, i) in data" :key="i" @dblclick="crud = v">
       <td class="room-color" :class="v.color"> <RoomColor :room="v" @change="put(v)" /> </td>
@@ -69,7 +69,6 @@ import("../css/style.css");
 const crud = ref(null);
 const glyph = ref(null);
 const data = ref([]);
-const fullscreen = ref(true)
 const lock = ref(false);
 const sort_by = ref({name: "", asc:1})
 
@@ -79,6 +78,7 @@ const get = () =>
     .get("rooms")
     .then((res) => res.map((e) => new DTO.Room(e)))
     .then((res) => (data.value = res))
+    .then(res => { sort(sort_by.value.name,false); return res;})
     .then(watcher);
 const put = (o) => db.put("rooms", o).then(get);
 
@@ -89,25 +89,27 @@ console.log('document.fullscreenEnabled', document.fullscreenEnabled);
 // document.documentElement.requestFullscreen();
 
 const toggle_fullscreen = () => {
-  if (fullscreen.value) {
+  if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen({ navigationUI: "show" }).then(() => { console.log('fullscreen')}).catch(err => {
       alert(`An error occurred while trying to switch into full-screen mode: ${err.message} (${err.name})`);
     });
   } else {
     document.exitFullscreen();
   }
-  fullscreen.value = !fullscreen.value;
 }
 
 const toggle_screenlock = () => {
   lock.value = !lock.value;
 }
 
-const sort = (v,i) => {
-  if (sort_by.value.name == v)
-    sort_by.value.asc *= -1;
-    else
-    sort_by.value.asc = 1;
+const sort = (v,flip=true) => {
+  if (flip) 
+  { 
+    if (sort_by.value.name == v) 
+      sort_by.value.asc *= -1; 
+    else 
+      sort_by.value.asc = 1;
+  }
   sort_by.value.name = v;
   switch (v) { 
     case 'Room':

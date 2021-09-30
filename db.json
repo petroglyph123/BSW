@@ -20,15 +20,14 @@
     {
       "id": "CN",
       "staff": {
-        "id": 7,
+        "id": 8,
         "dept": "CN",
         "name": {
-          "first": "Anderson",
-          "last": "CNlast",
-          "dirty": true,
-          "pager": "123"
+          "first": "Terry",
+          "last": "two",
+          "dirty": true
         },
-        "pager": "11-111"
+        "pager": "11---22"
       }
     },
     {
@@ -726,7 +725,7 @@
           "color": ""
         },
         "adm": {
-          "date": "2021-09-26T23:22:00.000Z",
+          "date": "2021-10-02T23:22:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
@@ -770,9 +769,19 @@
             5,
             3
           ],
-          "BARRIER": [],
-          "DC": [],
-          "EDU": []
+          "BARRIER": [
+            34,
+            16
+          ],
+          "DC": [
+            9,
+            11
+          ],
+          "EDU": [
+            38,
+            42,
+            39
+          ]
         }
       }
     },
@@ -792,7 +801,7 @@
           "color": ""
         },
         "adm": {
-          "date": "2021-09-30T14:04:13.971Z",
+          "date": "2021-09-27T14:04:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
@@ -834,8 +843,15 @@
           "ANC": [
             44
           ],
-          "BARRIER": [],
-          "DC": [],
+          "BARRIER": [
+            17,
+            15
+          ],
+          "DC": [
+            7,
+            11,
+            13
+          ],
           "EDU": []
         }
       }
@@ -856,7 +872,7 @@
           "color": ""
         },
         "adm": {
-          "date": "2021-09-24T14:45:00.000Z",
+          "date": "2021-09-28T14:45:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
@@ -898,8 +914,12 @@
           }
         },
         "glyphs": {
-          "ANC": [],
-          "BARRIER": [],
+          "ANC": [
+            44
+          ],
+          "BARRIER": [
+            14
+          ],
           "DC": [],
           "EDU": []
         }
@@ -921,12 +941,12 @@
           "color": ""
         },
         "adm": {
-          "date": "2021-09-30T19:20:42.145Z",
+          "date": "2021-09-28T19:20:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "disc": {
-          "date": "2021-10-01T19:20:42.145Z",
+          "date": "2021-10-04T19:20:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
@@ -944,11 +964,11 @@
             "pager": ""
           },
           "RN": {
-            "id": 5,
+            "id": 17,
             "dept": "RN",
             "name": {
-              "first": "Good",
-              "last": "Hands"
+              "first": "very long first name",
+              "last": "short last name"
             },
             "pager": ""
           },
@@ -967,7 +987,10 @@
             1,
             44
           ],
-          "BARRIER": [],
+          "BARRIER": [
+            26,
+            35
+          ],
           "DC": [],
           "EDU": []
         }
@@ -1031,8 +1054,14 @@
           }
         },
         "glyphs": {
-          "ANC": [],
-          "BARRIER": [],
+          "ANC": [
+            5
+          ],
+          "BARRIER": [
+            34,
+            25,
+            21
+          ],
           "DC": [],
           "EDU": []
         }
@@ -1096,8 +1125,14 @@
           }
         },
         "glyphs": {
-          "ANC": [],
-          "BARRIER": [],
+          "ANC": [
+            44
+          ],
+          "BARRIER": [
+            25,
+            35,
+            16
+          ],
           "DC": [],
           "EDU": []
         }
@@ -1309,7 +1344,7 @@
           "last": "Hornet"
         },
         "dob": {
-          "date": "2021-09-30T19:20:20.356Z",
+          "date": "2021-09-24T05:00:00.000Z",
           "fmt": "YYYY-MM-DD",
           "color": ""
         },
