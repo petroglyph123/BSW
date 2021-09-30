@@ -1,10 +1,10 @@
 <template>
   <div class="comments">
-    <h2>Sort</h2>
+    <h2>Add-Ons</h2>
     <li>click col header, descending flips upside down</li>
     <li>full screen toggle</li>
     <li>screenlock password protected 'MMDD'</li>
-    <h2>Bottom left static</h2>
+    <h2>Bottom Contact Info</h2>
     <li class=completed>Charge Nurse</li>
     <li class=completed>Unit Secretary </li>
     <li class=completed>Case Manager</li>
