@@ -104,8 +104,11 @@ const toggle_screenlock = () => {
 }
 
 const sort = (v,i) => {
+  if (sort_by.value.name == v)
+    sort_by.value.asc *= -1;
+    else
+    sort_by.value.asc = 1;
   sort_by.value.name = v;
-  sort_by.value.asc *= -1;
   switch (v) { 
     case 'Room':
       data.value.sort((l,r) => l.name.localeCompare(r.name) * sort_by.value.asc )
@@ -138,7 +141,7 @@ const sort = (v,i) => {
       data.value.sort((l,r) => l.patient.staffs['H']?.name?.last?.localeCompare(r.patient.staffs['H']?.name?.last) * sort_by.value.asc )
       break;
     case 'RN':
-      data.value.sort((l,r) => l.patient.staffs['RN']?.name?.last?.localeCompare(r.patient.staffs['RN']?.name?.last) * sort_by.value.asc )
+      data.value.sort((l,r) => l.patient.staffs['RN']?.name?.first?.localeCompare(r.patient.staffs['RN']?.name?.first) * sort_by.value.asc )
       break;
   }
 }
