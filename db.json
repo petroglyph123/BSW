@@ -137,8 +137,9 @@
       "id": 4,
       "dept": "H",
       "name": {
-        "first": "Nurse",
-        "last": "Wretched"
+        "first": "Hosp",
+        "last": "Wretched",
+        "dirty": true
       }
     },
     {
@@ -734,21 +735,151 @@
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
-        "ao": "",
+        "ao": "A",
         "hlm": 3,
         "rrs": "VH",
         "staffs": {
           "DR": {
             "id": 1,
-            "dept": "",
+            "dept": "DR",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Marcus",
+              "last": "Wellbie"
+            }
+          },
+          "RN": {
+            "id": 5,
+            "dept": "RN",
+            "name": {
+              "first": "Good",
+              "last": "Hands"
+            }
+          },
+          "H": {
+            "id": 3,
+            "dept": "H",
+            "name": {
+              "first": "Betty",
+              "last": "Jone",
+              "dirty": true
+            }
+          }
+        },
+        "glyphs": {
+          "ANC": [
+            5,
+            3
+          ],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "102",
+      "color": "white",
+      "patient": {
+        "gender": "female",
+        "name": {
+          "first": "Zorro",
+          "last": "Fox"
+        },
+        "dob": {
+          "date": "2021-09-30T14:04:13.971Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-09-30T14:04:13.971Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-01T14:04:13.971Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "O",
+        "hlm": 1,
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": 2,
+            "dept": "DR",
+            "name": {
+              "first": "Feel",
+              "last": "Good"
+            }
+          },
+          "RN": {
+            "id": 6,
+            "dept": "RN",
+            "name": {
+              "first": "Julie",
+              "last": "Johnson"
+            }
+          },
+          "H": {
+            "id": 4,
+            "dept": "H",
+            "name": {
+              "first": "Hosp",
+              "last": "Wretched"
+            }
+          }
+        },
+        "glyphs": {
+          "ANC": [
+            44
+          ],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "103",
+      "color": "white",
+      "patient": {
+        "gender": "male",
+        "name": {
+          "first": "Albert",
+          "last": "Einstein"
+        },
+        "dob": {
+          "date": "2021-09-30T14:45:38.374Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-09-24T14:45:00.000Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-05T14:45:00.000Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": 8,
+        "rrs": "H",
+        "staffs": {
+          "DR": {
+            "id": 1,
+            "dept": "DR",
+            "name": {
+              "first": "Marcus",
+              "last": "Wellbie"
             },
             "pager": ""
           },
           "RN": {
-            "id": 5,
+            "id": 17,
             "dept": "",
             "name": {
               "first": "",
@@ -757,40 +888,20 @@
             "pager": ""
           },
           "H": {
-            "id": 3,
+            "id": 4,
             "dept": "",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Hosp",
+              "last": "Wretched"
             },
             "pager": ""
           }
         },
         "glyphs": {
-          "ANC": [
-            1,
-            44,
-            5
-          ],
-          "BARRIER": [
-            20,
-            34,
-            16,
-            14,
-            22,
-            27,
-            17
-          ],
-          "DC": [
-            13,
-            9,
-            7
-          ],
-          "EDU": [
-            38,
-            42,
-            39
-          ]
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
         }
       }
     }

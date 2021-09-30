@@ -94,7 +94,7 @@ export class Patient {
         Object.assign(this.glyphs, src.glyphs);
     }
     get elos() {
-        return this.disc.diff(this.adm, 'days');
+        return this.disc.date.diff(this.adm.date, 'days');
     }
 }
 

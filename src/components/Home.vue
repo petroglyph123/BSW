@@ -1,17 +1,11 @@
 <template>
   <table cellpadding="0" cellspacing="0">
     <tr>
-      <th v-for="(v, i) in [ 'Room', 'Patient', 'AO', 'ADM', 'DISC', 'ELOS', 'RRS', 'HLM', 'Surgeon', 'Hospitalist', 'RN', 'ANC', 'BARRIER', 'DC', 'EDU', ]" :key="i" >
-        {{ v }}
-      </th>
+      <th v-for="(v, i) in [ 'Room', 'Patient', 'AO', 'ADM', 'DISC', 'ELOS', 'RRS', 'HLM', 'Surgeon', 'Hospitalist', 'RN', 'ANC', 'BARRIER', 'DC', 'EDU', ]" :key="i" @click=sort(v,i) :class="{sorted: v==sort_by.name, desc:sort_by.asc == -1}" > {{ v }} </th>
     </tr>
     <tr v-for="(v, i) in data" :key="i" @dblclick="crud = v">
-      <td class="room-color" :class="v.color">
-        <RoomColor :room="v" @change="put(v)" />
-      </td>
-      <td class="gender name" :class="v.patient.gender">
-        {{ v.patient.name.first }} {{ v.patient.name.last[0] }}
-      </td>
+      <td class="room-color" :class="v.color"> <RoomColor :room="v" @change="put(v)" /> </td>
+      <td class="gender name" :class="v.patient.gender"> {{ v.patient.name.first }} {{ v.patient.name.last[0] }} </td>
       <td class="ao" :class="v.patient.ao"><AO :room="v" /></td>
       <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("dd M-D") : '' }}</td>
       <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.format("dd M-D") : ''}}</td>
@@ -77,6 +71,7 @@ const glyph = ref(null);
 const data = ref([]);
 const fullscreen = ref(true)
 const lock = ref(false);
+const sort_by = ref({name: "", asc:1})
 
 const watcher = () => data.value.forEach((e) => watch(e, (o, n) => put(n)));
 const get = () =>
@@ -106,6 +101,46 @@ const toggle_fullscreen = () => {
 
 const toggle_screenlock = () => {
   lock.value = !lock.value;
+}
+
+const sort = (v,i) => {
+  sort_by.value.name = v;
+  sort_by.value.asc *= -1;
+  switch (v) { 
+    case 'Room':
+      data.value.sort((l,r) => l.name.localeCompare(r.name) * sort_by.value.asc )
+    break;
+    case 'Patient':
+      data.value.sort((l,r) => l.patient.name.first.localeCompare(r.patient.name.first) * sort_by.value.asc )
+      break;
+    case 'AO':
+      data.value.sort((l,r) => l.patient.ao.localeCompare(r.patient.ao) * sort_by.value.asc )
+      break;
+    case 'ADM':
+      data.value.sort((l,r) => l.patient.adm.date.diff(r.patient.adm.date,'seconds') * sort_by.value.asc )
+      break;
+    case 'DISC':
+      data.value.sort((l,r) => l.patient.disc.date.diff(r.patient.disc.date,'seconds') * sort_by.value.asc )
+      break;
+    case 'ELOS':
+      data.value.sort((l,r) => (l.patient.elos - r.patient.elos) * sort_by.value.asc )
+      break;
+    case 'RRS':
+      data.value.sort((l,r) => l.patient.rrs.localeCompare(r.patient.rrs) * sort_by.value.asc )
+      break;
+    case 'HLM':
+      data.value.sort((l,r) => (l.patient.hlm - r.patient.hlm) * sort_by.value.asc )
+      break;
+    case 'Surgeon':
+      data.value.sort((l,r) => l.patient.staffs['DR']?.name?.last?.localeCompare(r.patient.staffs['DR']?.name?.last) * sort_by.value.asc )
+      break;
+    case 'Hospitalist':
+      data.value.sort((l,r) => l.patient.staffs['H']?.name?.last?.localeCompare(r.patient.staffs['H']?.name?.last) * sort_by.value.asc )
+      break;
+    case 'RN':
+      data.value.sort((l,r) => l.patient.staffs['RN']?.name?.last?.localeCompare(r.patient.staffs['RN']?.name?.last) * sort_by.value.asc )
+      break;
+  }
 }
 
 </script>
@@ -162,5 +197,15 @@ button.lock {
 button.lock.locked {
   color:red;
   font-weight: 900;
+}
+
+th.sorted {
+  background-color:black;
+  color:white;
+  transition-duration: .5s;
+}
+th.sorted.desc {
+  transform: scale(1,-1);
+  transition-duration: .5s;
 }
 </style>

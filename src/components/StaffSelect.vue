@@ -1,7 +1,7 @@
 <template>
   <div class=container>
     <div>{{ name(room.patient.staffs[dept].id) }}</div>
-    <select v-model="room.patient.staffs[dept].id">
+    <select v-model="room.patient.staffs[dept].id" @change="change">
       <option :value="v.id" v-for="(v, i) in data" :key="i">
         {{ v.name.first }} {{ v.name.last }}
       </option>
@@ -19,6 +19,16 @@ import("../css/style.css");
 const props = defineProps({ room: Object, dept: String });
 
 const data = ref([]);
+
+const change = () => { 
+  let id = props.room.patient.staffs[props.dept].id;
+  let index = data.value.findIndex((e) => e.id === id);
+  if (index === -1) return "";
+  let staff = data.value[index];
+  props.room.patient.staffs[props.dept].dept = staff.dept;
+  props.room.patient.staffs[props.dept].name.first = staff.name.first;
+  props.room.patient.staffs[props.dept].name.last = staff.name.last;
+}
 
 const name = (id) => {
   let index = data.value.findIndex((e) => e.id === id);
