@@ -31,7 +31,7 @@ import("../css/style.css");
 
 const data = ref([]);
 const name = ref("");
-const get = () => db.get("rooms").then((res) => (data.value = res));
+const get = () => db.get("rooms").then((res) => (data.value = res)).then(() => data.value.forEach(e => e.changed=false));
 const post = () => db .post("rooms", Object.assign(new DTO.Room(), { name: name.value })) .then(get);
 const del = (o) => db.del("rooms", o).then(get);
 const put = (o) => db.put("rooms", o).then(get);
