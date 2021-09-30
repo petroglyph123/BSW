@@ -203,6 +203,8 @@ th.sorted {
   background-color:black;
   color:white;
   transition-duration: .5s;
+  border-radius: 5px 5px;
+  font-style: italic;
 }
 th.sorted.desc {
   transform: scale(1,-1);
