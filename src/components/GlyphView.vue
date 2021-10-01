@@ -39,13 +39,16 @@ img {
   border:0px solid transparent;
   transition-duration: .2s;
   border-radius: 3px 3px;
+  height: 46px;
 }
 .container {
+  display: flex;
   border:0px solid transparent;
   /* size of glyphs */
-  height:46px;
+  min-height:46px;
   margin: 0px 0px;
   padding:0px 0px;
+  flex-wrap: wrap;
 }
 img:hover {
   transform: scale(2);
