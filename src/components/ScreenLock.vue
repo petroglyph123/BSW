@@ -1,16 +1,9 @@
 <template>
   <div class="lock" @click.stop="click()">
     <div v-if="alert" :class="{ alert: alert }" :style="{'animation-duration': duration + 's'}">
-      Screen Locked {{ alert }}
+      Screen Locked
       <br />
-      <input
-        maxlength="4"
-        type="password"
-        v-model="password"
-        @input="unlock"
-        @click.stop
-        placeholder="????"
-      />
+      <input maxlength="4" type="password" v-model="password" @input="unlock" @click.stop placeholder="????" />
     </div>
   </div>
 </template>
@@ -27,25 +20,18 @@ const duration = ref(30);
 
 const click = (timeout=30) => {
   duration.value = timeout;
-  // console.log('timeout', timeout)
   alert.value = !alert.value;
   if (alert.value) {
     if (promise.value) clearTimeout(promise.value);
-    promise.value = setTimeout(() => {
-      alert.value = false;
-    }, 1000 * timeout);
-  }
+    promise.value = setTimeout(() => { alert.value = false; }, 1000 * timeout); }
 };
 
 const unlock = () => {
-  //   console.log("unlock", password.value);
   let now = new Date();
   let mm = "00" + (now.getMonth() + 1);
   let dd = "00" + now.getDate();
-  //   console.log("now", mm, mm.length, dd, dd.length);
   mm = mm.substr(mm.length - 2, 2);
   dd = dd.substr(dd.length - 2, 2);
-  //   console.log('password', password.value, mm+dd)
   if (password.value == mm + dd) {
     password.value = "";
     emits("close");

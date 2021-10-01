@@ -20,14 +20,15 @@
     {
       "id": "CN",
       "staff": {
-        "id": 8,
+        "id": 7,
         "dept": "CN",
         "name": {
-          "first": "Terry",
-          "last": "two",
-          "dirty": true
+          "first": "Anderson",
+          "last": "CNlast",
+          "dirty": true,
+          "pager": "123"
         },
-        "pager": "11---22"
+        "pager": "11-111"
       }
     },
     {
@@ -561,12 +562,12 @@
     {
       "id": 30,
       "type": "BARRIER",
-      "text": "Transportation",
+      "text": "Trans",
       "fg": "black",
       "bg": "#D6DCE4",
-      "length": 243,
-      "width": 253,
-      "src": "data:image/png;base64,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"
+      "length": 92,
+      "width": 100,
+      "src": "data:image/png;base64,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"
     },
     {
       "id": 31,
@@ -721,100 +722,23 @@
           "last": "Doe"
         },
         "dob": {
-          "date": "2000-09-29T05:00:00.000Z",
+          "date": "2021-10-01T00:05:04.548Z",
           "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "adm": {
-          "date": "2021-10-02T23:22:00.000Z",
+          "date": "2021-09-29T00:05:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "disc": {
-          "date": "2021-10-02T06:17:00.000Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "ao": "A",
-        "hlm": 3,
-        "rrs": "VH",
-        "staffs": {
-          "DR": {
-            "id": 1,
-            "dept": "DR",
-            "name": {
-              "first": "Marcus",
-              "last": "Wellbie"
-            }
-          },
-          "RN": {
-            "id": 17,
-            "dept": "RN",
-            "name": {
-              "first": "very long first name",
-              "last": "short last name"
-            }
-          },
-          "H": {
-            "id": 3,
-            "dept": "H",
-            "name": {
-              "first": "Betty",
-              "last": "Jone",
-              "dirty": true
-            }
-          }
-        },
-        "glyphs": {
-          "ANC": [
-            5,
-            3
-          ],
-          "BARRIER": [
-            34,
-            16
-          ],
-          "DC": [
-            9,
-            11
-          ],
-          "EDU": [
-            38,
-            42,
-            39
-          ]
-        }
-      },
-      "changed": true
-    },
-    {
-      "id": 2,
-      "name": "102",
-      "color": "white",
-      "patient": {
-        "gender": "female",
-        "name": {
-          "first": "Zorro",
-          "last": "Fox"
-        },
-        "dob": {
-          "date": "2021-09-30T14:04:13.971Z",
-          "fmt": "YYYY-MM-DD",
-          "color": ""
-        },
-        "adm": {
-          "date": "2021-09-27T14:04:00.000Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "disc": {
-          "date": "2021-10-01T14:04:13.971Z",
+          "date": "2021-10-05T00:05:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "ao": "O",
-        "hlm": 1,
-        "rrs": "",
+        "hlm": 8,
+        "rrs": "L",
         "staffs": {
           "DR": {
             "id": 2,
@@ -822,155 +746,15 @@
             "name": {
               "first": "Feel",
               "last": "Good"
-            }
-          },
-          "RN": {
-            "id": 6,
-            "dept": "RN",
-            "name": {
-              "first": "Julie",
-              "last": "Johnson"
-            }
-          },
-          "H": {
-            "id": 4,
-            "dept": "H",
-            "name": {
-              "first": "Hosp",
-              "last": "Wretched"
-            }
-          }
-        },
-        "glyphs": {
-          "ANC": [
-            44
-          ],
-          "BARRIER": [
-            17,
-            15
-          ],
-          "DC": [
-            7,
-            11,
-            13
-          ],
-          "EDU": []
-        }
-      }
-    },
-    {
-      "id": 3,
-      "name": "103",
-      "color": "white",
-      "patient": {
-        "gender": "male",
-        "name": {
-          "first": "Albert",
-          "last": "Einstein"
-        },
-        "dob": {
-          "date": "2021-09-30T14:45:38.374Z",
-          "fmt": "YYYY-MM-DD",
-          "color": ""
-        },
-        "adm": {
-          "date": "2021-09-28T14:45:00.000Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "disc": {
-          "date": "2021-10-05T14:45:00.000Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "ao": "",
-        "hlm": 8,
-        "rrs": "H",
-        "staffs": {
-          "DR": {
-            "id": 1,
-            "dept": "DR",
-            "name": {
-              "first": "Marcus",
-              "last": "Wellbie"
             },
             "pager": ""
           },
           "RN": {
-            "id": 6,
+            "id": 5,
             "dept": "RN",
             "name": {
-              "first": "Julie",
-              "last": "Johnson"
-            },
-            "pager": ""
-          },
-          "H": {
-            "id": 4,
-            "dept": "",
-            "name": {
-              "first": "Hosp",
-              "last": "Wretched"
-            },
-            "pager": ""
-          }
-        },
-        "glyphs": {
-          "ANC": [
-            44
-          ],
-          "BARRIER": [
-            14
-          ],
-          "DC": [],
-          "EDU": []
-        }
-      }
-    },
-    {
-      "id": 4,
-      "name": "104",
-      "color": "red",
-      "patient": {
-        "gender": "male",
-        "name": {
-          "first": "Tom",
-          "last": "Jones"
-        },
-        "dob": {
-          "date": "2021-09-30T19:20:42.145Z",
-          "fmt": "YYYY-MM-DD",
-          "color": ""
-        },
-        "adm": {
-          "date": "2021-09-28T19:20:00.000Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "disc": {
-          "date": "2021-10-04T19:20:00.000Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "ao": "O",
-        "hlm": 4,
-        "rrs": "VH",
-        "staffs": {
-          "DR": {
-            "id": 1,
-            "dept": "DR",
-            "name": {
-              "first": "Marcus",
-              "last": "Wellbie"
-            },
-            "pager": ""
-          },
-          "RN": {
-            "id": 17,
-            "dept": "RN",
-            "name": {
-              "first": "very long first name",
-              "last": "short last name"
+              "first": "Good",
+              "last": "Hands"
             },
             "pager": ""
           },
@@ -986,213 +770,90 @@
         },
         "glyphs": {
           "ANC": [
-            1,
-            44
+            44,
+            3,
+            5,
+            1
           ],
           "BARRIER": [
-            26,
-            35
-          ],
-          "DC": [],
-          "EDU": []
-        }
-      }
-    },
-    {
-      "id": 5,
-      "name": "105",
-      "color": "white",
-      "patient": {
-        "gender": "female",
-        "name": {
-          "first": "Helen",
-          "last": "Keller"
-        },
-        "dob": {
-          "date": "2021-09-30T19:20:04.038Z",
-          "fmt": "YYYY-MM-DD",
-          "color": ""
-        },
-        "adm": {
-          "date": "2021-09-30T19:20:04.038Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "disc": {
-          "date": "2021-10-01T19:20:04.038Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "ao": "",
-        "hlm": "",
-        "rrs": "H",
-        "staffs": {
-          "DR": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          },
-          "RN": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          },
-          "H": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          }
-        },
-        "glyphs": {
-          "ANC": [
-            5
-          ],
-          "BARRIER": [
-            34,
-            25,
-            21
-          ],
-          "DC": [],
-          "EDU": []
-        }
-      }
-    },
-    {
-      "id": 6,
-      "name": "106",
-      "color": "white",
-      "patient": {
-        "gender": "female",
-        "name": {
-          "first": "Betty",
-          "last": "White"
-        },
-        "dob": {
-          "date": "2021-09-30T19:20:07.144Z",
-          "fmt": "YYYY-MM-DD",
-          "color": ""
-        },
-        "adm": {
-          "date": "2021-09-30T19:20:07.144Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "disc": {
-          "date": "2021-10-01T19:20:07.144Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "ao": "",
-        "hlm": "",
-        "rrs": "L",
-        "staffs": {
-          "DR": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          },
-          "RN": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          },
-          "H": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          }
-        },
-        "glyphs": {
-          "ANC": [
-            44
-          ],
-          "BARRIER": [
-            25,
             35,
+            36,
+            26,
+            14,
+            30,
+            19,
+            22,
+            28,
+            33,
+            34,
             16
           ],
-          "DC": [],
-          "EDU": []
+          "DC": [
+            11,
+            8,
+            2
+          ],
+          "EDU": [
+            43,
+            42,
+            39
+          ]
         }
       }
     },
     {
-      "id": 7,
-      "name": "107",
-      "color": "white",
+      "id": 2,
+      "name": "102",
+      "color": "red",
       "patient": {
-        "gender": "",
+        "gender": "female",
         "name": {
-          "first": "Grace",
-          "last": "Jones"
+          "first": "Jane",
+          "last": "Smith"
         },
         "dob": {
-          "date": "2021-09-30T19:20:09.662Z",
+          "date": "2021-10-01T00:00:54.105Z",
           "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "adm": {
-          "date": "2021-09-30T19:20:09.662Z",
+          "date": "2021-09-23T00:00:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "disc": {
-          "date": "2021-10-01T19:20:09.662Z",
+          "date": "2021-10-03T00:00:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "ao": "",
         "hlm": "",
-        "rrs": "M",
+        "rrs": "",
         "staffs": {
           "DR": {
-            "id": null,
-            "dept": "",
+            "id": 1,
+            "dept": "DR",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Marcus",
+              "last": "Wellbie"
             },
             "pager": ""
           },
           "RN": {
-            "id": null,
-            "dept": "",
+            "id": 17,
+            "dept": "RN",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "very long first name",
+              "last": "short last name"
             },
             "pager": ""
           },
           "H": {
-            "id": null,
-            "dept": "",
+            "id": 4,
+            "dept": "H",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Hosp",
+              "last": "Wretched"
             },
             "pager": ""
           }
@@ -1206,33 +867,33 @@
       }
     },
     {
-      "id": 8,
-      "name": "108",
+      "id": 3,
+      "name": "103-A",
       "color": "white",
       "patient": {
         "gender": "male",
         "name": {
-          "first": "Holy",
-          "last": "Moses"
+          "first": "Joe",
+          "last": "Smith"
         },
         "dob": {
-          "date": "2021-09-30T19:20:13.764Z",
+          "date": "2021-10-01T02:18:59.000Z",
           "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "adm": {
-          "date": "2021-09-30T19:20:13.764Z",
+          "date": "2021-09-17T02:18:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "disc": {
-          "date": "2021-10-01T19:20:13.764Z",
+          "date": "2021-10-07T02:18:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "ao": "",
         "hlm": "",
-        "rrs": "VH",
+        "rrs": "",
         "staffs": {
           "DR": {
             "id": null,
@@ -1244,141 +905,11 @@
             "pager": ""
           },
           "RN": {
-            "id": null,
-            "dept": "",
+            "id": 5,
+            "dept": "RN",
             "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          },
-          "H": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          }
-        },
-        "glyphs": {
-          "ANC": [],
-          "BARRIER": [],
-          "DC": [],
-          "EDU": []
-        }
-      }
-    },
-    {
-      "id": 9,
-      "name": "109",
-      "color": "white",
-      "patient": {
-        "gender": "male",
-        "name": {
-          "first": "Johnny",
-          "last": "Depp"
-        },
-        "dob": {
-          "date": "2021-09-30T19:20:17.174Z",
-          "fmt": "YYYY-MM-DD",
-          "color": ""
-        },
-        "adm": {
-          "date": "2021-09-30T19:20:17.174Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "disc": {
-          "date": "2021-10-01T19:20:17.174Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "ao": "",
-        "hlm": "",
-        "rrs": "H",
-        "staffs": {
-          "DR": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          },
-          "RN": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          },
-          "H": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          }
-        },
-        "glyphs": {
-          "ANC": [],
-          "BARRIER": [],
-          "DC": [],
-          "EDU": []
-        }
-      }
-    },
-    {
-      "id": 10,
-      "name": "110",
-      "color": "white",
-      "patient": {
-        "gender": "male",
-        "name": {
-          "first": "Green",
-          "last": "Hornet"
-        },
-        "dob": {
-          "date": "2021-09-24T05:00:00.000Z",
-          "fmt": "YYYY-MM-DD",
-          "color": ""
-        },
-        "adm": {
-          "date": "2021-09-30T19:20:20.356Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "disc": {
-          "date": "2021-10-01T19:20:20.356Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
-          "color": ""
-        },
-        "ao": "",
-        "hlm": "",
-        "rrs": "M",
-        "staffs": {
-          "DR": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
-            },
-            "pager": ""
-          },
-          "RN": {
-            "id": null,
-            "dept": "",
-            "name": {
-              "first": "",
-              "last": ""
+              "first": "Good",
+              "last": "Hands"
             },
             "pager": ""
           },
