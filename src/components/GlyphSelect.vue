@@ -2,11 +2,19 @@
   <div class="back-drop" @click="emits('close')" @dblclick.stop>
     <div @click.stop class="not-selected" @dblclick.stop>
       <h2 style="color: green">Click Glyph to select</h2>
-      <img :src="v.src" v-for="(v, i) in data" :key="i" @click="toggle(v, this)" v-show=!v.selected />
+      <div v-for="(v, i) in data" :key="i" @click="toggle(v, this)" style="display: inline-block" >
+        <transition name="fade">
+          <img :src="v.src" v-show="!v.selected" />
+        </transition>
+      </div>
     </div>
     <div class="selected" @click.stop @dblclick.stop>
       <h2 style="color: red">Click Glyph to de-select</h2>
-      <img :src="v.src" v-for="(v, i) in data" :key="i" @click="toggle(v, this)" v-show=v.selected />
+      <div v-for="(v, i) in data" :key="i" @click="toggle(v, this)" style="display: inline-block" >
+        <transition name="fade">
+          <img :src="v.src" v-if="v.selected" />
+        </transition>
+      </div>
     </div>
   </div>
 </template>
@@ -54,9 +62,10 @@ get();
   width: 100%;
   height: 100%;
   background-color: rgba(128, 128, 128, 0.5);
-  z-index:1000;
+  z-index: 1000;
 }
-div.not-selected, div.selected {
+div.not-selected,
+div.selected {
   background-color: white;
   border: 1px solid lightgray;
   border-radius: 5px 5px;
@@ -74,5 +83,17 @@ img {
 }
 img:hover {
   box-shadow: 5px 5px 10px gray;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 1s ease;
+}
+.fade-enter-from, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.selected .fade-enter-from, .selected .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(-100%);
 }
 </style>
