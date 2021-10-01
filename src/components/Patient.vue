@@ -1,5 +1,5 @@
 <template>
-  <div class="back-drop" @click="emits('close')">
+  <div class="back-drop" @click.stop>
     <div class="content" @click.stop>
       <h2 class=room-color :class=room.color>{{room.name}}</h2>
       <table>
@@ -41,8 +41,13 @@
             <input type="datetime-local" v-model="room.patient.disc.text" />
           </td>
         </tr>
+        <tr>
+          <th>ELOS</th>
+          <td>{{room.patient.elos}} days</td>
+        </tr>
       </table>
-    <button @click=discharge>Discharge</button>
+    <button @click="$emit('close')">Close</button> 
+    <button class=disc @click=discharge>Discharge</button>
     </div>
   </div>
 </template>
@@ -112,6 +117,13 @@ button {
 
 input {
   font-size: 1em;;
-
 }
+
+button {
+  margin:2em .5em .5em .5em;
+}
+button.disc {
+  color:red;
+}
+
 </style>
