@@ -86,14 +86,14 @@ img:hover {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 1s ease;
+  transition: all .5s ease;
 }
 .fade-enter-from, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
-  transform: translateY(100%);
+  transform: translateY(100%) scale(0);
 }
 .selected .fade-enter-from, .selected .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
-  transform: translateY(-100%);
+  transform: translateY(-100%) scale(0);
 }
 </style>

@@ -44,9 +44,9 @@
     </tr>
   </table>
   </div>
-  <ScreenLock v-if=lock @close="lock=false" />
   <button id=f11 class=f11 @click="toggle_fullscreen">full screen</button>
   <button id=lock class=lock @click="toggle_screenlock" :class="{locked: lock}">screen {{lock ? "locked" : "unlocked"}}</button>
+  <ScreenLock v-if=lock @close="lock=false" />
 </template>
 
 <script setup>
