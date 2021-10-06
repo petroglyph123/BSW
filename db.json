@@ -20,15 +20,14 @@
     {
       "id": "CN",
       "staff": {
-        "id": 7,
+        "id": 8,
         "dept": "CN",
         "name": {
-          "first": "Anderson",
-          "last": "CNlast",
-          "dirty": true,
-          "pager": "123"
+          "first": "Terry",
+          "last": "two",
+          "dirty": true
         },
-        "pager": "11-111"
+        "pager": "11---22"
       }
     },
     {
@@ -264,6 +263,24 @@
       "name": {
         "first": "very long first name",
         "last": "short last name"
+      },
+      "pager": ""
+    },
+    {
+      "id": 18,
+      "dept": "US",
+      "name": {
+        "first": "John",
+        "last": "Smith"
+      },
+      "pager": "121212"
+    },
+    {
+      "id": 19,
+      "dept": "RN",
+      "name": {
+        "first": "yong",
+        "last": "ikj"
       },
       "pager": ""
     }
@@ -789,10 +806,10 @@
       "name": "102",
       "color": "red",
       "patient": {
-        "gender": "",
+        "gender": "male",
         "name": {
-          "first": "",
-          "last": ""
+          "first": "Joe",
+          "last": "Black"
         },
         "dob": {
           "date": "2021-10-01T14:46:00.434Z",
@@ -800,58 +817,81 @@
           "color": ""
         },
         "adm": {
-          "date": "2021-10-01T14:46:00.434Z",
+          "date": "2021-10-04T14:46:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "disc": {
-          "date": "2021-10-02T14:46:00.434Z",
+          "date": "2021-10-09T14:46:00.000Z",
           "fmt": "YYYY-MM-DDTHH:mm",
           "color": ""
         },
         "ao": "",
-        "hlm": "",
-        "rrs": "",
+        "hlm": 4,
+        "rrs": "M",
         "staffs": {
           "DR": {
-            "id": null,
-            "dept": "",
+            "id": 2,
+            "dept": "DR",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Feel",
+              "last": "Good"
             },
             "pager": ""
           },
           "RN": {
-            "id": null,
-            "dept": "",
+            "id": 6,
+            "dept": "RN",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Julie",
+              "last": "Johnson"
             },
             "pager": ""
           },
           "H": {
-            "id": null,
-            "dept": "",
+            "id": 3,
+            "dept": "H",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Betty",
+              "last": "Jone"
             },
             "pager": ""
           }
         },
         "glyphs": {
-          "ANC": [],
-          "BARRIER": [],
-          "DC": [],
-          "EDU": []
+          "ANC": [
+            2,
+            4
+          ],
+          "BARRIER": [
+            15,
+            24,
+            35,
+            21,
+            33,
+            34,
+            16,
+            25,
+            36,
+            19,
+            28,
+            26
+          ],
+          "DC": [
+            8,
+            13,
+            5
+          ],
+          "EDU": [
+            43,
+            41
+          ]
         }
       }
     },
     {
       "id": 3,
-      "name": "103-A",
+      "name": "103",
       "color": "white",
       "patient": {
         "gender": "male",
@@ -908,11 +948,805 @@
         },
         "glyphs": {
           "ANC": [],
+          "BARRIER": [
+            15,
+            25,
+            24
+          ],
+          "DC": [],
+          "EDU": []
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "104",
+      "color": "white",
+      "patient": {
+        "gender": "male",
+        "name": {
+          "first": "Nancy",
+          "last": "Drew"
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:39.766Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-04T19:39:00.000Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-09T19:39:00.000Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
           "BARRIER": [],
           "DC": [],
           "EDU": []
         }
       }
+    },
+    {
+      "id": 5,
+      "name": "105",
+      "color": "white",
+      "patient": {
+        "gender": "male",
+        "name": {
+          "first": "kop",
+          "last": "Good"
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:43.986Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-04T19:39:00.000Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-09T19:39:00.000Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "106",
+      "color": "white",
+      "patient": {
+        "gender": "",
+        "name": {
+          "first": "",
+          "last": ""
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:44.658Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-06T19:39:44.658Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-07T19:39:44.658Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      },
+      "changed": true
+    },
+    {
+      "id": 7,
+      "name": "107",
+      "color": "white",
+      "patient": {
+        "gender": "",
+        "name": {
+          "first": "",
+          "last": ""
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:45.142Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-06T19:39:45.142Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-07T19:39:45.142Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      },
+      "changed": true
+    },
+    {
+      "id": 9,
+      "name": "108",
+      "color": "white",
+      "patient": {
+        "gender": "",
+        "name": {
+          "first": "",
+          "last": ""
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:46.454Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-06T19:39:46.454Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-07T19:39:46.454Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      },
+      "changed": true
+    },
+    {
+      "id": 10,
+      "name": "109",
+      "color": "white",
+      "patient": {
+        "gender": "",
+        "name": {
+          "first": "",
+          "last": ""
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:47.180Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-06T19:39:47.180Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-07T19:39:47.180Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      },
+      "changed": true
+    },
+    {
+      "id": 11,
+      "name": "110",
+      "color": "white",
+      "patient": {
+        "gender": "",
+        "name": {
+          "first": "",
+          "last": ""
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:47.900Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-06T19:39:47.900Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-07T19:39:47.900Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      },
+      "changed": true
+    },
+    {
+      "id": 12,
+      "name": "111",
+      "color": "white",
+      "patient": {
+        "gender": "",
+        "name": {
+          "first": "",
+          "last": ""
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:49.572Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-06T19:39:49.572Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-07T19:39:49.572Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      },
+      "changed": true
+    },
+    {
+      "id": 13,
+      "name": "112",
+      "color": "white",
+      "patient": {
+        "gender": "",
+        "name": {
+          "first": "",
+          "last": ""
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:50.438Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-06T19:39:50.438Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-07T19:39:50.438Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      },
+      "changed": true
+    },
+    {
+      "id": 14,
+      "name": "114",
+      "color": "white",
+      "patient": {
+        "gender": "",
+        "name": {
+          "first": "",
+          "last": ""
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:51.080Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-06T19:39:51.080Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-07T19:39:51.081Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      },
+      "changed": true
+    },
+    {
+      "id": 15,
+      "name": "115",
+      "color": "white",
+      "patient": {
+        "gender": "",
+        "name": {
+          "first": "",
+          "last": ""
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:51.758Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-06T19:39:51.758Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-07T19:39:51.758Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      },
+      "changed": true
+    },
+    {
+      "id": 16,
+      "name": "116",
+      "color": "white",
+      "patient": {
+        "gender": "",
+        "name": {
+          "first": "",
+          "last": ""
+        },
+        "dob": {
+          "date": "2021-10-06T19:39:52.696Z",
+          "fmt": "YYYY-MM-DD",
+          "color": ""
+        },
+        "adm": {
+          "date": "2021-10-06T19:39:52.696Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "disc": {
+          "date": "2021-10-07T19:39:52.696Z",
+          "fmt": "YYYY-MM-DDTHH:mm",
+          "color": ""
+        },
+        "ao": "",
+        "hlm": "",
+        "rrs": "",
+        "staffs": {
+          "DR": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "RN": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          },
+          "H": {
+            "id": null,
+            "dept": "",
+            "name": {
+              "first": "",
+              "last": ""
+            },
+            "pager": ""
+          }
+        },
+        "glyphs": {
+          "ANC": [],
+          "BARRIER": [],
+          "DC": [],
+          "EDU": []
+        }
+      },
+      "changed": true
     }
   ]
 }
