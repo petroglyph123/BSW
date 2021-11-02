@@ -1,6 +1,7 @@
 <template>
   <div class="comments">
-    about TBD
+    <h4>Full Screen Toggle</h4>
+    <li>F11</li>
   </div>
 </template>
 

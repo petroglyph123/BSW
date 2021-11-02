@@ -8,7 +8,7 @@
       <td class="gender name" :class="v.patient.gender"> {{ v.patient.name.first[0] }} {{ v.patient.name.last }} </td>
       <td class="ao" :class="v.patient.ao"><AO :room="v" /></td>
       <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("M/D/YY") : '' }}</td>
-      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.format("M/D/YY") : ''}}</td>
+      <td class="room-color" :class="v.patient.disc.color"><DiscColor :room="v" @change="put(v)"></DiscColor></td>
       <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.diff(v.patient.adm.date, "days")+'d' : '' }}</td>
       <td class="rrs" :class="v.patient.rrs"><RRS :room="v" /></td>
       <td class="hlm"><HLM :room="v" /></td>
@@ -44,8 +44,9 @@
     </tr>
   </table>
   </div>
-  <button id=f11 class=f11 @click="toggle_fullscreen">full screen</button>
-  <button id=lock class=lock @click="toggle_screenlock" :class="{locked: lock}">screen {{lock ? "locked" : "unlocked"}}</button>
+  <!-- <button id=f11 class=f11 @click="toggle_fullscreen">full screen</button> -->
+  <!-- <button id=lock class=lock @click="toggle_screenlock" :class="{locked: lock}">screen {{lock ? "locked" : "unlocked"}}</button> -->
+  <div class=f11>FullScreen => F11</div>
   <ScreenLock v-if=lock @close="lock=false" />
 </template>
 
@@ -63,6 +64,7 @@ import StaffSelectStatic from "./StaffSelectStatic.vue";
 import AnalogClock from "./AnalogClock.vue";
 import GlyphView from "./GlyphView.vue";
 import ScreenLock from "./ScreenLock.vue";
+import DiscColor from "./DiscColor.vue";
 import moment from "moment";
 
 import("../css/style.css");
@@ -228,5 +230,11 @@ th.sorted {
 th.sorted.desc {
   transform: scale(1,-1);
   transition-duration: .5s;
+}
+.f11 {
+  position:fixed;
+  bottom:2px;
+  right:2px;
+  font-size: .74em;
 }
 </style>

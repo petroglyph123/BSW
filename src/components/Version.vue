@@ -1,5 +1,8 @@
 <template>
   <div class="comments">
+    <h2>2021-11-02</h2>
+    <h3>Candace H. & Pat C.</h3>
+    <li>remove screen lock</li>
     <h2>2021-11-01</h2>
     <h3>1st deployment feedback</h3>
     <li class=done>RN (Nurse) entry should be first name only</li>

@@ -41,6 +41,8 @@ new_staff.value.dept = props.dept;
 
 const data = ref([]);
 
+const reset_user = () => {new_staff.value.name.first = ''; new_start.value.name.last = ''; new_staff.value.page = '';}
+
 const get = () =>
   db
     .get("staffs")
@@ -49,7 +51,7 @@ const get = () =>
     .then(res => data.value.forEach(e => e.name.dirty = false))
 const put = (o) => db.put("staffs", o).then(get);
 const del = (o) => db.del('staffs', o).then(get);
-const post = () => db.post('staffs', new_staff.value).then(get)
+const post = () => db.post('staffs', new_staff.value).then(get).then(reset_user)
 
 get();
 
