@@ -23,22 +23,23 @@
             <input type="text" :class="room.patient.gender" v-model="room.patient.name.last" placeholder="last" />
           </td>
         </tr>
-        <tr>
+        <!-- <tr>
           <th>DOB</th>
           <td>
             <input type="date" v-model="room.patient.dob.text" />
+            {{room.patient.dob.text}}
           </td>
-        </tr>
+        </tr> -->
         <tr>
           <th>adm</th>
           <td>
-            <input type="datetime-local" v-model="room.patient.adm.text" />
+            <input type="date" v-model="room.patient.adm.text" />
           </td>
         </tr>
         <tr>
           <th>disc</th>
           <td>
-            <input type="datetime-local" v-model="room.patient.disc.text" />
+            <input type="date" v-model="room.patient.disc.text" />
           </td>
         </tr>
         <tr>

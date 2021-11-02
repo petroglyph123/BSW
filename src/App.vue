@@ -11,11 +11,11 @@ import AnalogClock from './components/AnalogClock.vue'
     <router-link to="/">Home</router-link> |
     <router-link to="/setup">Setup</router-link> |
     <router-link to="/staffs">Staffs</router-link> |
-    <router-link to="/glyphs">Glyphs</router-link> |
+    <!-- <router-link to="/glyphs">Glyphs</router-link> | -->
     <router-link to="/version">Version</router-link>  |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/glyph-generator">Glyph Generator</router-link> |
-    <router-link to="/x">X</router-link>  
+    <!-- <router-link to="/glyph-generator">Glyph Generator</router-link> | -->
+    <!-- <router-link to="/x">X</router-link>  | -->
+    <router-link to="/about">About</router-link>
   </div>
   <router-view />
 </template>

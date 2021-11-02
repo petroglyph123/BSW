@@ -5,10 +5,10 @@
     </tr>
     <tr v-for="(v, i) in data" :key="i" @dblclick="crud = v">
       <td class="room-color" :class="v.color"> <RoomColor :room="v" @change="put(v)" /> </td>
-      <td class="gender name" :class="v.patient.gender"> {{ v.patient.name.first }} {{ v.patient.name.last[0] }} </td>
+      <td class="gender name" :class="v.patient.gender"> {{ v.patient.name.first[0] }} {{ v.patient.name.last }} </td>
       <td class="ao" :class="v.patient.ao"><AO :room="v" /></td>
-      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("dd M-D") : '' }}</td>
-      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.format("dd M-D") : ''}}</td>
+      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("M/D/YY") : '' }}</td>
+      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.format("M/D/YY") : ''}}</td>
       <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.diff(v.patient.adm.date, "days")+'d' : '' }}</td>
       <td class="rrs" :class="v.patient.rrs"><RRS :room="v" /></td>
       <td class="hlm"><HLM :room="v" /></td>
@@ -63,6 +63,7 @@ import StaffSelectStatic from "./StaffSelectStatic.vue";
 import AnalogClock from "./AnalogClock.vue";
 import GlyphView from "./GlyphView.vue";
 import ScreenLock from "./ScreenLock.vue";
+import moment from "moment";
 
 import("../css/style.css");
 
@@ -102,6 +103,16 @@ const toggle_screenlock = () => {
   lock.value = !lock.value;
 }
 
+const sort_time = (l, r, key) => {
+  let ll = l.patient[key].date;
+  let rr = r.patient[key].date;
+  if (!l.patient.name.first && !l.patient.name.last)
+    ll = new moment('2000-01-01')
+  if (!r.patient.name.first && !r.patient.name.last)
+    rr = new moment('2000-01-01')
+  return ll.diff(rr,'seconds') * sort_by.value.asc ;
+}
+
 const sort = (v,flip=true) => {
   if (flip) 
   { 
@@ -122,10 +133,12 @@ const sort = (v,flip=true) => {
       data.value.sort((l,r) => l.patient.ao.localeCompare(r.patient.ao) * sort_by.value.asc )
       break;
     case 'ADM':
-      data.value.sort((l,r) => l.patient.adm.date.diff(r.patient.adm.date,'seconds') * sort_by.value.asc )
+      // data.value.sort((l,r) => l.patient.adm.date.diff(r.patient.adm.date,'seconds') * sort_by.value.asc )
+      data.value.sort((l,r) => sort_time(l,r,'adm'));
       break;
     case 'DISC':
-      data.value.sort((l,r) => l.patient.disc.date.diff(r.patient.disc.date,'seconds') * sort_by.value.asc )
+      // data.value.sort((l,r) => l.patient.disc.date.diff(r.patient.disc.date,'seconds') * sort_by.value.asc )
+      data.value.sort((l,r) => sort_time(l,r,'disc'));
       break;
     case 'ELOS':
       data.value.sort((l,r) => (l.patient.elos - r.patient.elos) * sort_by.value.asc )
@@ -156,12 +169,13 @@ table {
   border-collapse: collapse;
   text-align: left;
   border-spacing: 0px 0px;
-}
+} 
 td {
   border: 1px solid lightgray;
   text-align: center;
   padding: 0px 0px;
   margin: 0xp 0px;
+  font-weight: 900;
 }
 th {
   padding-left: 0.2em;

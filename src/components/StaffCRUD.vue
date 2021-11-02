@@ -6,7 +6,7 @@
       <td>
         <input type="text" v-model="v.name.first" placeholder="first" @input="v.name.dirty = true" />
         <input type="text" v-model="v.name.last" placeholder="last" @input="v.name.dirty = true" />
-        <input type="text" v-model="v.pager" placeholder="pager" @input="v.name.dirty = true" v-if=v.pager />
+        <input type="text" v-model="v.pager" placeholder="pager" @input="v.name.dirty = true" v-if=pager />
       </td>
       <td>
         <button @click="put(v)" :disabled="!v.name.dirty">update</button>
@@ -21,7 +21,7 @@
         <input type="text" v-model="new_staff.pager" placeholder="pager" v-if=pager />
       </td>
       <td>
-        <button @click="post" :disabled="!new_staff.name.first || !new_staff.name.last" > add </button>
+        <button @click="post" :disabled="!new_staff.name.first && !new_staff.name.last" > add </button>
       </td>
     </tr>
   </table>

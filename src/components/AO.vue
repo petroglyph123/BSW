@@ -16,7 +16,7 @@ import("../css/style.css");
 
 const props = defineProps({ room: Object });
 
-const options = ref([{name:'', value:''},{name:'Admin', value:'A'},{name:'Observation', value:'O'}])
+const options = ref([{name:'', value:''},{name:'Admit', value:'A'},{name:'Observation', value:'O'}])
 
 </script>
 

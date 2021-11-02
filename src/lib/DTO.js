@@ -36,7 +36,7 @@ export class DateFormat {
     }
     assign(src) {
         this.date = new moment(src.date);
-        this.fmt = src.fmt;
+        // this.fmt = src.fmt;
         this.color = src.color;
     }
     get text() {
@@ -63,8 +63,8 @@ export class Patient {
         this.gender = "";
         this.name = new Name();
         this.dob = new DateFormat();
-        this.adm = new DateTimeFormat();
-        this.disc = new DateTimeFormat();
+        this.adm = new DateFormat();
+        this.disc = new DateFormat();
         this.disc.date.add(1, 'days');
         this.ao = "";
         this.hlm = ''; // 1
