@@ -1,7 +1,7 @@
 <template>
   <div class="comments">
     <h4>Full Screen Toggle</h4>
-    <li>F11</li>
+    <img src="../assets/f11.png" alt=""> 
   </div>
 </template>
 
@@ -17,5 +17,8 @@ import("./../css/style.css");
 }
 ul, ol {
   list-style-type: none;
+}
+img {
+  width: 64px;
 }
 </style>
