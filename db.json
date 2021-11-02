@@ -860,11 +860,11 @@
             "pager": ""
           },
           "RN": {
-            "id": 20,
+            "id": 17,
             "dept": "RN",
             "name": {
-              "first": "Nurse",
-              "last": ""
+              "first": "very long first name",
+              "last": "short last name"
             },
             "pager": ""
           },
@@ -987,12 +987,12 @@
         },
         "adm": {
           "date": "2021-10-04T19:39:00.000Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
+          "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "disc": {
           "date": "2021-10-09T19:39:00.000Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
+          "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "ao": "",
@@ -1009,20 +1009,20 @@
             "pager": ""
           },
           "RN": {
-            "id": 19,
+            "id": 6,
             "dept": "RN",
             "name": {
-              "first": "yong",
-              "last": "ikj"
+              "first": "Julie",
+              "last": "Johnson"
             },
             "pager": ""
           },
           "H": {
-            "id": 3,
+            "id": 4,
             "dept": "H",
             "name": {
-              "first": "Betty",
-              "last": "Jone"
+              "first": "Hosp",
+              "last": "Wretched"
             },
             "pager": ""
           }

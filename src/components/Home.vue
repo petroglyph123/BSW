@@ -1,13 +1,13 @@
 <template>
   <table cellpadding="0" cellspacing="0">
     <tr>
-      <th v-for="(v, i) in [ 'Room', 'Patient', 'AO', 'ADM', 'DISC', 'ELOS', 'RRS', 'HLM', 'Surgeon', 'Hospitalist', 'RN', 'ANC', 'BARRIER', 'DC', 'EDU', ]" :key="i" @click=sort(v,true) :class="{sorted: v==sort_by.name, desc:sort_by.asc == -1}" > {{ v }} </th>
+      <th v-for="(v, i) in [ 'Room', 'Patient', 'AO', 'ADM', 'DISC', 'ELOS', 'RRS', 'HLM', 'Surgeon', 'Hospitalist', 'RN', 'Ancillary', 'Barrier', 'DC', 'EDU', ]" :key="i" @click=sort(v,true) :class="{sorted: v==sort_by.name, desc:sort_by.asc == -1}" > {{ v }} </th>
     </tr>
     <tr v-for="(v, i) in data" :key="i" @dblclick="crud = v">
       <td class="room-color" :class="v.color"> <RoomColor :room="v" @change="put(v)" /> </td>
       <td class="gender name" :class="v.patient.gender"> {{ v.patient.name.first[0] }} {{ v.patient.name.last }} </td>
       <td class="ao" :class="v.patient.ao"><AO :room="v" /></td>
-      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("M/D/YY") : '' }}</td>
+      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("M-D") : '' }}</td>
       <td class="room-color" :class="v.patient.disc.color"><DiscColor :room="v" @change="put(v)"></DiscColor></td>
       <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.diff(v.patient.adm.date, "days")+'d' : '' }}</td>
       <td class="rrs" :class="v.patient.rrs"><RRS :room="v" /></td>
@@ -236,5 +236,9 @@ th.sorted.desc {
   bottom:2px;
   right:2px;
   font-size: .74em;
+}
+tr:nth-child(even)
+{
+  background-color:rgba(10,128, 250, .1);
 }
 </style>
