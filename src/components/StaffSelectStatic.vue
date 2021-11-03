@@ -3,7 +3,8 @@
     <div>{{ name() }}</div>
     <select v-model="id" @change="change">
       <option :value="v.id" v-for="(v, i) in staffs" :key="i">
-        {{ v.name.first }} {{ v.pager }} [{{ v.id }}]
+        {{ v.name.first }} {{v.name.last}} #{{ v.pager }} 
+        <!-- [{{ v.id }}] -->
       </option>
     </select>
   </div>

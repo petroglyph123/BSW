@@ -2,7 +2,7 @@
   <h3>{{ title }}</h3>
   <table class="margin-auto">
     <tr v-for="(v, i) in data" :key="i">
-      <th>{{ v.id }}</th>
+      <!-- <th>{{ v.id }}</th> -->
       <td>
         <input type="text" v-model="v.name.first" placeholder="first" @input="v.name.dirty = true" />
         <input type="text" v-model="v.name.last" placeholder="last" @input="v.name.dirty = true" />
@@ -14,7 +14,7 @@
       </td>
     </tr>
     <tr>
-      <th></th>
+      <!-- <th></th> -->
       <td>
         <input type="text" v-model="new_staff.name.first" placeholder="first" />
         <input type="text" v-model="new_staff.name.last" placeholder="last" />

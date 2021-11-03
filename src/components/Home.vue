@@ -187,7 +187,7 @@ th {
 div.bottom {
   position: fixed;
   display: flex;
-  bottom:.5em;
+  bottom:.01em;
   align-content: center;
   align-items: center;
   width: 100%;
