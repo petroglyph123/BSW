@@ -20,25 +20,28 @@
     {
       "id": "CN",
       "staff": {
-        "id": 31,
+        "id": 7,
         "dept": "CN",
         "name": {
-          "first": "efe",
-          "last": "efe"
+          "first": "Anderson",
+          "last": "CNlast",
+          "dirty": true,
+          "pager": "123"
         },
-        "pager": "ef"
+        "pager": "1111"
       }
     },
     {
       "id": "US",
       "staff": {
-        "id": 18,
+        "id": 9,
         "dept": "US",
         "name": {
-          "first": "John",
-          "last": "Smith"
+          "first": "James",
+          "last": "12",
+          "dirty": true
         },
-        "pager": "121212"
+        "pager": "1212-1212"
       }
     },
     {
@@ -182,7 +185,7 @@
       "dept": "US",
       "name": {
         "first": "James",
-        "last": "12",
+        "last": "Last",
         "dirty": true
       },
       "pager": "1212-1212"
@@ -192,7 +195,7 @@
       "dept": "US",
       "name": {
         "first": "Mary",
-        "last": "12",
+        "last": "last",
         "dirty": true
       },
       "pager": "3232-1212"
@@ -394,6 +397,33 @@
         "last": "efe"
       },
       "pager": "ef"
+    },
+    {
+      "id": 32,
+      "dept": "NCH",
+      "name": {
+        "first": "A",
+        "last": "A"
+      },
+      "pager": "AAA"
+    },
+    {
+      "id": 33,
+      "dept": "NCH",
+      "name": {
+        "first": "Z",
+        "last": "Z"
+      },
+      "pager": "ZZZ"
+    },
+    {
+      "id": 34,
+      "dept": "NCH",
+      "name": {
+        "first": "C",
+        "last": "C"
+      },
+      "pager": "CCC"
     }
   ],
   "glyphs": [
@@ -859,11 +889,11 @@
         "rrs": "VH",
         "staffs": {
           "DR": {
-            "id": 2,
+            "id": 30,
             "dept": "DR",
             "name": {
-              "first": "Feel",
-              "last": "Good"
+              "first": "asdf",
+              "last": "efe"
             },
             "pager": ""
           },
@@ -877,11 +907,11 @@
             "pager": ""
           },
           "H": {
-            "id": 3,
+            "id": 22,
             "dept": "H",
             "name": {
-              "first": "Betty",
-              "last": "Jone"
+              "first": "a",
+              "last": "BBBBB"
             },
             "pager": ""
           }
@@ -928,7 +958,7 @@
           "color": ""
         },
         "ao": "",
-        "hlm": "",
+        "hlm": 2,
         "rrs": "",
         "staffs": {
           "DR": {
@@ -999,7 +1029,7 @@
           "color": "red"
         },
         "ao": "A",
-        "hlm": "",
+        "hlm": 4,
         "rrs": "VH",
         "staffs": {
           "DR": {
@@ -1046,10 +1076,10 @@
       "name": "104",
       "color": "white",
       "patient": {
-        "gender": "",
+        "gender": "male",
         "name": {
-          "first": "",
-          "last": ""
+          "first": "A",
+          "last": "Smith"
         },
         "dob": {
           "date": "2021-11-03T18:21:59.736Z",
@@ -1067,7 +1097,7 @@
           "color": ""
         },
         "ao": "",
-        "hlm": "",
+        "hlm": 5,
         "rrs": "",
         "staffs": {
           "DR": {
@@ -1153,7 +1183,7 @@
           "color": ""
         },
         "ao": "",
-        "hlm": "",
+        "hlm": 3,
         "rrs": "",
         "staffs": {
           "DR": {
@@ -1223,7 +1253,7 @@
           "color": ""
         },
         "ao": "",
-        "hlm": "",
+        "hlm": 7,
         "rrs": "",
         "staffs": {
           "DR": {

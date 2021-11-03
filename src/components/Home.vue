@@ -5,7 +5,7 @@
     </tr>
     <tr v-for="(v, i) in data" :key="i" @dblclick="crud = v">
       <td class="room-color" :class="v.color"> <RoomColor :room="v" @change="put(v)" /> </td>
-      <td class="gender name" :class="v.patient.gender"> {{ v.patient.name.first[0] }} {{ v.patient.name.last }} </td>
+      <td class="gender name" :class="v.patient.gender"> {{ v.patient.name.last }} {{ v.patient.name.first[0] }} </td>
       <td class="ao" :class="v.patient.ao"><AO :room="v" /></td>
       <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("M/D") : '' }}</td>
       <td class="room-color" :class="v.patient.disc.color"><DiscColor :room="v" @change="put(v)"></DiscColor></td>
@@ -129,7 +129,7 @@ const sort = (v,flip=true) => {
       data.value.sort((l,r) => l.name.localeCompare(r.name) * sort_by.value.asc )
     break;
     case 'Patient':
-      data.value.sort((l,r) => l.patient.name.first.localeCompare(r.patient.name.first) * sort_by.value.asc )
+      data.value.sort((l,r) => l.patient.name.last.localeCompare(r.patient.name.last) * sort_by.value.asc )
       break;
     case 'AO':
       data.value.sort((l,r) => l.patient.ao.localeCompare(r.patient.ao) * sort_by.value.asc )

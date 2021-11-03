@@ -35,11 +35,17 @@ const get_staff = () =>
     .then((res) => (id.value = staff.value?.staff?.id))
 get_staff();
 
+const sort = () => {
+  return staffs.value.sort((l,r) => l.name.first.localeCompare(r.name.first));
+  }
+
+
 const get_staffs = () =>
   db
     .get("staffs")
     .then((res) => res.filter((e) => e.dept === props.dept))
     .then((res) => (staffs.value = res))
+    .then(sort)
 get_staffs();
 
 const change = () => {
