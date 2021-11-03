@@ -1,7 +1,7 @@
 <template>
   <div class="comments">
     <h4>Full Screen Toggle</h4>
-    <img src="../assets/f11.png" alt=""> 
+    <img src="../assets/f11.png" alt="" style="width:64px"> 
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import("./../css/style.css");
 </script>
 
-<style>
+<style scoped>
 .comments {
   text-align: left;
   margin: auto auto;
@@ -18,7 +18,7 @@ import("./../css/style.css");
 ul, ol {
   list-style-type: none;
 }
-img {
+/* img {
   width: 64px;
-}
+} */
 </style>

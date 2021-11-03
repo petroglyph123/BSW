@@ -177,7 +177,7 @@ td {
   text-align: center;
   padding: 0px 0px;
   margin: 0xp 0px;
-  font-weight: 900;
+  font-weight: bold;
 }
 th {
   padding-left: 0.2em;
@@ -197,11 +197,11 @@ table.bottom {
   margin:auto auto;
 }
 table.bottom th {
-  padding: 0.35em 0.35em;
+  padding: 0.05em 0.35em;
   border: 1px solid lightgray;
 }
 table.bottom td {
-  padding: 0.35em 0.35em;
+  padding: 0.05em 0.35em;
 }
 button.f11 {
   position:fixed;

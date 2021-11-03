@@ -42,7 +42,7 @@ import AnalogClock from './components/AnalogClock.vue'
 
 #nav {
   padding: 0px;
-  /* margin-top: 0em; */
+  margin-top: -.5em;
   margin-bottom: 1em;
 }
 

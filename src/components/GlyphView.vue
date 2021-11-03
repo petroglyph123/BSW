@@ -45,10 +45,11 @@ img {
   display: flex;
   border:0px solid transparent;
   /* size of glyphs */
-  min-height:46px;
+  min-height:1em;
   margin: 0px 0px;
   padding:0px 0px;
   flex-wrap: wrap;
+  /* background-color: blue; */
 }
 img:hover {
   transform: scale(2);
