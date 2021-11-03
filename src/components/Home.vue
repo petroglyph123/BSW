@@ -7,7 +7,7 @@
       <td class="room-color" :class="v.color"> <RoomColor :room="v" @change="put(v)" /> </td>
       <td class="gender name" :class="v.patient.gender"> {{ v.patient.name.first[0] }} {{ v.patient.name.last }} </td>
       <td class="ao" :class="v.patient.ao"><AO :room="v" /></td>
-      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("M-D") : '' }}</td>
+      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("MM/DD") : '' }}</td>
       <td class="room-color" :class="v.patient.disc.color"><DiscColor :room="v" @change="put(v)"></DiscColor></td>
       <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.diff(v.patient.adm.date, "days")+'d' : '' }}</td>
       <td class="rrs" :class="v.patient.rrs"><RRS :room="v" /></td>
