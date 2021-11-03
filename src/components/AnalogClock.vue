@@ -78,8 +78,9 @@ setInterval(() => {
 
 .clock {
     position:fixed;
-    top:5px;
-    right:5px;
+    /* top:5px; */
+    left:5px;
+    bottom:5px;
     z-index: -1;
 }
 </style>

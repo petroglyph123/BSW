@@ -39,7 +39,7 @@ img {
   border:0px solid transparent;
   transition-duration: .2s;
   border-radius: 3px 3px;
-  height: 46px;
+  height: 40px;
 }
 .container {
   display: flex;

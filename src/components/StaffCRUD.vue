@@ -41,7 +41,7 @@ new_staff.value.dept = props.dept;
 
 const data = ref([]);
 
-const reset_user = () => {new_staff.value.name.first = ''; new_start.value.name.last = ''; new_staff.value.page = '';}
+const reset_user = () => {new_staff.value.name.first = ''; new_staff.value.name.last = ''; new_staff.value.pager = '';}
 
 const get = () =>
   db

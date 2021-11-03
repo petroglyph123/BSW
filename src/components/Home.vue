@@ -1,5 +1,5 @@
 <template>
-  <table cellpadding="0" cellspacing="0">
+  <table cellpadding="0" cellspacing="0" style="width:100%;">
     <tr>
       <th v-for="(v, i) in [ 'Room', 'Patient', 'AO', 'ADM', 'DISC', 'ELOS', 'RRS', 'HLM', 'Surgeon', 'Hospitalist', 'RN', 'Ancillary', 'Barrier', 'DC', 'EDU', ]" :key="i" @click=sort(v,true) :class="{sorted: v==sort_by.name, desc:sort_by.asc == -1}" > {{ v }} </th>
     </tr>

@@ -15,7 +15,7 @@ import { ref } from "vue";
 import * as db from "../lib/db";
 import("../css/style.css");
 
-const colors = ref(["white", "red"]);
+const colors = ref(["white", "yellow", "orange",  "red"]);
 const props = defineProps({ room: Object });
 </script>
 

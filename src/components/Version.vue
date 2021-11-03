@@ -1,5 +1,9 @@
 <template>
   <div class="comments">
+    <h2>2011-11-03</h2>
+    <h3>Demo feedback - Candace H., Pat C., Joe O.</h3>
+    <li>DISC color - white, yellow, orange, red</li> 
+    <li>Clear - First & Last name from staff screen</li>
     <h2>2021-11-02</h2>
     <h3>Candace H. & Pat C.</h3>
     <li>remove screen lock</li>

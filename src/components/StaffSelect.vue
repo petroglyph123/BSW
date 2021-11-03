@@ -3,7 +3,8 @@
     <div>{{ name(room.patient.staffs[dept].id) }}</div>
     <select v-model="room.patient.staffs[dept].id" @change="change">
       <option :value="v.id" v-for="(v, i) in data" :key="i">
-        {{ v.name.first }} {{ v.name.last }}
+        <!-- {{ v.name.first }} {{ v.name.last }} -->
+        {{ name(v.id) }}
       </option>
     </select>
   </div>
@@ -45,11 +46,20 @@ const name = (id) => {
   }
 };
 
+const sort = () => {
+  let key = "first";
+  if (props.dept == "DR" || props.dept == "H")
+    return data.value.sort((l,r) => l.name.last.localeCompare(r.name.last));
+  else
+    return data.value.sort((l,r) => l.name.first.localeCompare(r.name.first));
+}
+
 const get = () =>
   db
     .get("staffs")
     .then((res) => res.filter((e) => e.dept === props.dept))
-    .then((res) => (data.value = res));
+    .then((res) => (data.value = res))
+    .then(sort)
 
 get();
 </script>

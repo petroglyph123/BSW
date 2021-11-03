@@ -20,28 +20,25 @@
     {
       "id": "CN",
       "staff": {
-        "id": 7,
+        "id": 31,
         "dept": "CN",
         "name": {
-          "first": "Anderson",
-          "last": "CNlast",
-          "dirty": true,
-          "pager": "123"
+          "first": "efe",
+          "last": "efe"
         },
-        "pager": "222"
+        "pager": "ef"
       }
     },
     {
       "id": "US",
       "staff": {
-        "id": 10,
+        "id": 18,
         "dept": "US",
         "name": {
-          "first": "Mary",
-          "last": "12",
-          "dirty": true
+          "first": "John",
+          "last": "Smith"
         },
-        "pager": "3232-1212"
+        "pager": "121212"
       }
     },
     {
@@ -113,7 +110,7 @@
       "id": 1,
       "dept": "DR",
       "name": {
-        "first": "Marcus",
+        "first": "",
         "last": "Wellbie",
         "dirty": true
       }
@@ -168,7 +165,7 @@
         "dirty": true,
         "pager": "123"
       },
-      "pager": "222"
+      "pager": "1111"
     },
     {
       "id": 8,
@@ -289,8 +286,9 @@
       "id": 20,
       "dept": "RN",
       "name": {
-        "first": "Nurse",
-        "last": ""
+        "first": "Nurse Very Very VeryVery Long First Name",
+        "last": "",
+        "dirty": true
       },
       "pager": ""
     },
@@ -309,7 +307,8 @@
       "dept": "H",
       "name": {
         "first": "a",
-        "last": ""
+        "last": "BBBBB",
+        "dirty": true
       },
       "pager": ""
     },
@@ -321,6 +320,80 @@
         "last": ""
       },
       "pager": "222"
+    },
+    {
+      "id": 24,
+      "dept": "H",
+      "name": {
+        "first": "ABC",
+        "last": "Last Name",
+        "dirty": true
+      },
+      "pager": ""
+    },
+    {
+      "id": 25,
+      "dept": "RN",
+      "name": {
+        "first": "Nancy",
+        "last": "",
+        "dirty": true
+      },
+      "pager": ""
+    },
+    {
+      "id": 26,
+      "dept": "DR",
+      "name": {
+        "first": "John",
+        "last": "Smith"
+      },
+      "pager": ""
+    },
+    {
+      "id": 27,
+      "dept": "DR",
+      "name": {
+        "first": "XXXX",
+        "last": "YYYY"
+      },
+      "pager": ""
+    },
+    {
+      "id": 28,
+      "dept": "CN",
+      "name": {
+        "first": "New",
+        "last": "Last"
+      },
+      "pager": "121"
+    },
+    {
+      "id": 29,
+      "dept": "DR",
+      "name": {
+        "first": "asdf",
+        "last": "asdf"
+      },
+      "pager": ""
+    },
+    {
+      "id": 30,
+      "dept": "DR",
+      "name": {
+        "first": "asdf",
+        "last": "efe"
+      },
+      "pager": ""
+    },
+    {
+      "id": 31,
+      "dept": "CN",
+      "name": {
+        "first": "efe",
+        "last": "efe"
+      },
+      "pager": "ef"
     }
   ],
   "glyphs": [
@@ -779,7 +852,7 @@
         "disc": {
           "date": "2021-11-05T05:00:00.000Z",
           "fmt": "YYYY-MM-DD",
-          "color": ""
+          "color": "red"
         },
         "ao": "A",
         "hlm": 5,
@@ -795,20 +868,20 @@
             "pager": ""
           },
           "RN": {
-            "id": 17,
+            "id": 19,
             "dept": "RN",
             "name": {
-              "first": "very long first name",
-              "last": "short last name"
+              "first": "yong",
+              "last": "ikj"
             },
             "pager": ""
           },
           "H": {
-            "id": 4,
+            "id": 3,
             "dept": "H",
             "name": {
-              "first": "Hosp",
-              "last": "Wretched"
+              "first": "Betty",
+              "last": "Jone"
             },
             "pager": ""
           }
@@ -859,29 +932,29 @@
         "rrs": "",
         "staffs": {
           "DR": {
-            "id": null,
-            "dept": "",
+            "id": 1,
+            "dept": "DR",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Marcus",
+              "last": "Wellbie"
             },
             "pager": ""
           },
           "RN": {
-            "id": null,
-            "dept": "",
+            "id": 5,
+            "dept": "RN",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Good",
+              "last": "Hands"
             },
             "pager": ""
           },
           "H": {
-            "id": null,
-            "dept": "",
+            "id": 4,
+            "dept": "H",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Hosp",
+              "last": "Wretched"
             },
             "pager": ""
           }
@@ -895,7 +968,6 @@
             12
           ],
           "EDU": [
-            40,
             43
           ]
         }
@@ -906,10 +978,10 @@
       "name": "103",
       "color": "yellow",
       "patient": {
-        "gender": "",
+        "gender": "male",
         "name": {
-          "first": "",
-          "last": ""
+          "first": "Martin",
+          "last": "Doe"
         },
         "dob": {
           "date": "2021-11-03T18:21:55.564Z",
@@ -917,34 +989,34 @@
           "color": ""
         },
         "adm": {
-          "date": "2021-11-03T18:21:55.564Z",
+          "date": "2021-11-01T05:00:00.000Z",
           "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "disc": {
           "date": "2021-11-04T18:21:55.564Z",
           "fmt": "YYYY-MM-DD",
-          "color": ""
+          "color": "red"
         },
-        "ao": "",
+        "ao": "A",
         "hlm": "",
         "rrs": "VH",
         "staffs": {
           "DR": {
-            "id": null,
-            "dept": "",
+            "id": 2,
+            "dept": "DR",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Feel",
+              "last": "Good"
             },
             "pager": ""
           },
           "RN": {
-            "id": null,
-            "dept": "",
+            "id": 6,
+            "dept": "RN",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Julie",
+              "last": "Johnson"
             },
             "pager": ""
           },
@@ -999,11 +1071,11 @@
         "rrs": "",
         "staffs": {
           "DR": {
-            "id": null,
-            "dept": "",
+            "id": 2,
+            "dept": "DR",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Feel",
+              "last": "Good"
             },
             "pager": ""
           },
@@ -1027,8 +1099,29 @@
           }
         },
         "glyphs": {
-          "ANC": [],
-          "BARRIER": [],
+          "ANC": [
+            1
+          ],
+          "BARRIER": [
+            23,
+            18,
+            14,
+            27,
+            29,
+            15,
+            25,
+            24,
+            35,
+            36,
+            19,
+            28,
+            32,
+            31,
+            17,
+            30,
+            22,
+            21
+          ],
           "DC": [],
           "EDU": []
         }
@@ -1039,10 +1132,10 @@
       "name": "105",
       "color": "white",
       "patient": {
-        "gender": "",
+        "gender": "male",
         "name": {
-          "first": "",
-          "last": ""
+          "first": "James",
+          "last": "King"
         },
         "dob": {
           "date": "2021-11-02T16:40:45.544Z",
@@ -1064,11 +1157,11 @@
         "rrs": "",
         "staffs": {
           "DR": {
-            "id": null,
-            "dept": "",
+            "id": 1,
+            "dept": "DR",
             "name": {
               "first": "",
-              "last": ""
+              "last": "Wellbie"
             },
             "pager": ""
           },
@@ -1082,18 +1175,23 @@
             "pager": ""
           },
           "H": {
-            "id": null,
-            "dept": "",
+            "id": 22,
+            "dept": "H",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "a",
+              "last": "BBBBB"
             },
             "pager": ""
           }
         },
         "glyphs": {
-          "ANC": [],
-          "BARRIER": [],
+          "ANC": [
+            4
+          ],
+          "BARRIER": [
+            21,
+            14
+          ],
           "DC": [],
           "EDU": []
         }
@@ -1110,18 +1208,18 @@
           "last": ""
         },
         "dob": {
-          "date": "2021-10-06T19:39:44.658Z",
+          "date": "2021-11-03T19:07:22.131Z",
           "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "adm": {
-          "date": "2021-10-06T19:39:44.658Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
+          "date": "2021-11-03T19:07:22.131Z",
+          "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "disc": {
-          "date": "2021-10-07T19:39:44.658Z",
-          "fmt": "YYYY-MM-DDTHH:mm",
+          "date": "2021-11-04T19:07:22.131Z",
+          "fmt": "YYYY-MM-DD",
           "color": ""
         },
         "ao": "",
@@ -1129,11 +1227,11 @@
         "rrs": "",
         "staffs": {
           "DR": {
-            "id": null,
-            "dept": "",
+            "id": 26,
+            "dept": "DR",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "John",
+              "last": "Smith"
             },
             "pager": ""
           },
