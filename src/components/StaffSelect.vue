@@ -32,6 +32,7 @@ const change = () => {
 }
 
 const name = (id) => {
+  if (id == 'undefined') return '';
   let index = data.value.findIndex((e) => e.id === id);
   if (index === -1) return "";
   let staff = data.value[index];
@@ -65,4 +66,5 @@ get();
 </script>
 
 <style scoped>
+
 </style>

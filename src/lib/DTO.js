@@ -73,6 +73,7 @@ export class Patient {
             DR: new Staff(),
             RN: new Staff(),
             H: new Staff(),
+            APP: new Staff(),
         }
         this.glyphs = {
             ANC: [],

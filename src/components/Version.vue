@@ -1,5 +1,9 @@
 <template>
   <div class="comments">
+    <h2>2011-11-04</h2>
+    <h3>Pat C.</h3>
+    <li>add APP</li>
+    <li>add font size slider</li>
     <h2>2011-11-03</h2>
     <h3>Demo feedback - Candace H., Pat C., Joe O.</h3>
     <li>DISC color - white, yellow, orange, red</li> 

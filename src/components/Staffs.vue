@@ -2,6 +2,7 @@
 
 <StaffCRUD title="Surgeons" dept="DR" />
 <StaffCRUD title="Hopitalists" dept="H" />
+<StaffCRUD title="APP" dept="APP" />
 <StaffCRUD title="Nurses" dept="RN" />
 <hr>
 <StaffCRUD title="Charge Nurses" dept="CN" :pager=true />

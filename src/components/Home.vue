@@ -1,9 +1,9 @@
 <template>
-  <table cellpadding="0" cellspacing="0" style="width:100%;">
+  <table id=board cellpadding="0" cellspacing="0" style="width:100%;">
     <tr>
-      <th v-for="(v, i) in [ 'Room', 'Patient', 'AO', 'ADM', 'DISC', 'ELOS', 'RRS', 'HLM', 'Surgeon', 'Hospitalist', 'RN', 'Ancillary', 'Barrier', 'DC', 'EDU', ]" :key="i" @click=sort(v,true) :class="{sorted: v==sort_by.name, desc:sort_by.asc == -1}" > {{ v }} </th>
+      <th v-for="(v, i) in [ 'Room', 'Patient', 'AO', 'ADM', 'DISC', 'ELOS', 'RRS', 'HLM', 'Surgeon', 'Hospitalist', 'APP', 'RN', 'Ancillary', 'Barrier', 'DC', 'EDU', ]" :key="i" @click=sort(v,true) :class="{sorted: v==sort_by.name, desc:sort_by.asc == -1}" > {{ v }} </th>
     </tr>
-    <tr v-for="(v, i) in data" :key="i" @dblclick="crud = v">
+    <tr v-for="(v, i) in data" :key="i" @dblclick="crud = v" class=body :style="{'font-size': (font_size/100) +'em'}">
       <td class="room-color" :class="v.color"> <RoomColor :room="v" @change="put(v)" /> </td>
       <td class="gender name" :class="v.patient.gender"> {{ v.patient.name.last }} {{ v.patient.name.first[0] }} </td>
       <td class="ao" :class="v.patient.ao"><AO :room="v" /></td>
@@ -14,6 +14,7 @@
       <td class="hlm"><HLM :room="v" /></td>
       <td><StaffSelect :room="v" dept="DR" /></td>
       <td><StaffSelect :room="v" dept="H" /></td>
+      <td><StaffSelect :room="v" dept="APP" /></td>
       <td><StaffSelect :room="v" dept="RN" /></td>
       <td><GlyphView :room="v" glyph="ANC" /></td>
       <td><GlyphView :room="v" glyph="BARRIER" /></td>
@@ -44,9 +45,12 @@
     </tr>
   </table>
   </div>
+  <div class="fontsize">
+    font size {{font_size}}% <input type="range" min="100" max="200" v-model=font_size> 
+  </div>
   <!-- <button id=f11 class=f11 @click="toggle_fullscreen">full screen</button> -->
   <!-- <button id=lock class=lock @click="toggle_screenlock" :class="{locked: lock}">screen {{lock ? "locked" : "unlocked"}}</button> -->
-  <div class=f11>FullScreen => F11</div>
+  <div class=f11>Toggle Full Screen F11</div>
   <ScreenLock v-if=lock @close="lock=false" />
 </template>
 
@@ -74,6 +78,7 @@ const glyph = ref(null);
 const data = ref([]);
 const lock = ref(false);
 const sort_by = ref({name: "", asc:1})
+const font_size = ref(100);
 
 const watcher = () => data.value.forEach((e) => watch(e, (o, n) => put(n)));
 const get = () =>
@@ -88,7 +93,8 @@ const put = (o) => db.put("rooms", o).then(get);
 // init
 get();
 
-console.log('document.fullscreenEnabled', document.fullscreenEnabled);
+// debug
+// console.log('document.fullscreenEnabled', document.fullscreenEnabled);
 // document.documentElement.requestFullscreen();
 
 const toggle_fullscreen = () => {
@@ -160,6 +166,9 @@ const sort = (v,flip=true) => {
     case 'RN':
       data.value.sort((l,r) => l.patient.staffs['RN']?.name?.first?.localeCompare(r.patient.staffs['RN']?.name?.first) * sort_by.value.asc )
       break;
+    case 'APP':
+      data.value.sort((l,r) => l.patient.staffs['APP']?.name?.first?.localeCompare(r.patient.staffs['APP']?.name?.first) * sort_by.value.asc )
+      break;
   }
 }
 
@@ -178,6 +187,7 @@ td {
   padding: 0px 0px;
   margin: 0xp 0px;
   font-weight: bold;
+  text-transform: capitalize;
 }
 th {
   padding-left: 0.2em;
@@ -233,12 +243,17 @@ th.sorted.desc {
 }
 .f11 {
   position:fixed;
-  bottom:2px;
-  right:2px;
-  font-size: .74em;
+  bottom:1px;
+  right:1px;
+  font-size: .75em;
 }
 tr:nth-child(even)
 {
   background-color:rgba(10,128, 250, .1);
+}
+.fontsize {
+  position: fixed;
+  bottom: 1em;
+  right:1px;
 }
 </style>

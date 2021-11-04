@@ -424,6 +424,24 @@
         "last": "C"
       },
       "pager": "CCC"
+    },
+    {
+      "id": 35,
+      "dept": "APP",
+      "name": {
+        "first": "First",
+        "last": ""
+      },
+      "pager": ""
+    },
+    {
+      "id": 36,
+      "dept": "APP",
+      "name": {
+        "first": "second",
+        "last": ""
+      },
+      "pager": ""
     }
   ],
   "glyphs": [
@@ -862,7 +880,7 @@
     {
       "id": 1,
       "name": "101",
-      "color": "white",
+      "color": "yellow",
       "patient": {
         "gender": "male",
         "name": {
@@ -882,18 +900,18 @@
         "disc": {
           "date": "2021-11-05T05:00:00.000Z",
           "fmt": "YYYY-MM-DD",
-          "color": "red"
+          "color": "yellow"
         },
         "ao": "A",
-        "hlm": 5,
+        "hlm": 6,
         "rrs": "VH",
         "staffs": {
           "DR": {
-            "id": 30,
+            "id": 27,
             "dept": "DR",
             "name": {
-              "first": "asdf",
-              "last": "efe"
+              "first": "XXXX",
+              "last": "YYYY"
             },
             "pager": ""
           },
@@ -907,11 +925,20 @@
             "pager": ""
           },
           "H": {
-            "id": 22,
+            "id": 24,
             "dept": "H",
             "name": {
-              "first": "a",
-              "last": "BBBBB"
+              "first": "ABC",
+              "last": "Last Name"
+            },
+            "pager": ""
+          },
+          "APP": {
+            "id": 35,
+            "dept": "APP",
+            "name": {
+              "first": "First",
+              "last": ""
             },
             "pager": ""
           }
@@ -955,7 +982,7 @@
         "disc": {
           "date": "2021-11-03T05:00:00.000Z",
           "fmt": "YYYY-MM-DD",
-          "color": ""
+          "color": "orange"
         },
         "ao": "",
         "hlm": 2,
@@ -985,6 +1012,15 @@
             "name": {
               "first": "Hosp",
               "last": "Wretched"
+            },
+            "pager": ""
+          },
+          "APP": {
+            "id": 35,
+            "dept": "APP",
+            "name": {
+              "first": "First",
+              "last": ""
             },
             "pager": ""
           }
@@ -1051,10 +1087,19 @@
             "pager": ""
           },
           "H": {
-            "id": null,
-            "dept": "",
+            "id": 22,
+            "dept": "H",
             "name": {
-              "first": "",
+              "first": "a",
+              "last": "BBBBB"
+            },
+            "pager": ""
+          },
+          "APP": {
+            "id": 36,
+            "dept": "APP",
+            "name": {
+              "first": "second",
               "last": ""
             },
             "pager": ""
@@ -1119,10 +1164,19 @@
             "pager": ""
           },
           "H": {
-            "id": null,
-            "dept": "",
+            "id": 3,
+            "dept": "H",
             "name": {
-              "first": "",
+              "first": "Betty",
+              "last": "Jone"
+            },
+            "pager": ""
+          },
+          "APP": {
+            "id": 35,
+            "dept": "APP",
+            "name": {
+              "first": "First",
               "last": ""
             },
             "pager": ""
@@ -1133,14 +1187,9 @@
             1
           ],
           "BARRIER": [
-            23,
             18,
             14,
             27,
-            29,
-            15,
-            25,
-            24,
             35,
             36,
             19,
@@ -1149,8 +1198,9 @@
             31,
             17,
             30,
-            22,
-            21
+            21,
+            25,
+            23
           ],
           "DC": [],
           "EDU": []
@@ -1164,7 +1214,7 @@
       "patient": {
         "gender": "male",
         "name": {
-          "first": "James",
+          "first": "William",
           "last": "King"
         },
         "dob": {
@@ -1187,11 +1237,11 @@
         "rrs": "",
         "staffs": {
           "DR": {
-            "id": 1,
+            "id": 30,
             "dept": "DR",
             "name": {
-              "first": "",
-              "last": "Wellbie"
+              "first": "asdf",
+              "last": "efe"
             },
             "pager": ""
           },
@@ -1205,11 +1255,20 @@
             "pager": ""
           },
           "H": {
-            "id": 22,
+            "id": 3,
             "dept": "H",
             "name": {
-              "first": "a",
-              "last": "BBBBB"
+              "first": "Betty",
+              "last": "Jone"
+            },
+            "pager": ""
+          },
+          "APP": {
+            "id": 36,
+            "dept": "APP",
+            "name": {
+              "first": "second",
+              "last": ""
             },
             "pager": ""
           }
@@ -1222,7 +1281,9 @@
             21,
             14
           ],
-          "DC": [],
+          "DC": [
+            12
+          ],
           "EDU": []
         }
       }
@@ -1232,10 +1293,10 @@
       "name": "106",
       "color": "white",
       "patient": {
-        "gender": "",
+        "gender": "male",
         "name": {
-          "first": "",
-          "last": ""
+          "first": "James",
+          "last": "Kane"
         },
         "dob": {
           "date": "2021-11-03T19:07:22.131Z",
@@ -1243,7 +1304,7 @@
           "color": ""
         },
         "adm": {
-          "date": "2021-11-03T19:07:22.131Z",
+          "date": "2021-11-01T05:00:00.000Z",
           "fmt": "YYYY-MM-DD",
           "color": ""
         },
@@ -1266,27 +1327,40 @@
             "pager": ""
           },
           "RN": {
-            "id": null,
-            "dept": "",
+            "id": 6,
+            "dept": "RN",
             "name": {
-              "first": "",
-              "last": ""
+              "first": "Julie",
+              "last": "Johnson"
             },
             "pager": ""
           },
           "H": {
-            "id": null,
-            "dept": "",
+            "id": 3,
+            "dept": "H",
             "name": {
-              "first": "",
+              "first": "Betty",
+              "last": "Jone"
+            },
+            "pager": ""
+          },
+          "APP": {
+            "id": 36,
+            "dept": "APP",
+            "name": {
+              "first": "second",
               "last": ""
             },
             "pager": ""
           }
         },
         "glyphs": {
-          "ANC": [],
-          "BARRIER": [],
+          "ANC": [
+            1
+          ],
+          "BARRIER": [
+            30
+          ],
           "DC": [],
           "EDU": []
         }
