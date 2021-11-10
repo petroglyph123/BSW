@@ -6,6 +6,9 @@
         <transition name="fade">
           <img :src="v.src" v-show="!v.selected" />
         </transition>
+        <transition name="fade">
+          <div v-show="!v.selected">{{v.name}}</div>
+        </transition>
       </div>
     </div>
     <div class="selected" @click.stop @dblclick.stop>
@@ -13,6 +16,9 @@
       <div v-for="(v, i) in data" :key="i" @click="toggle(v, this)" style="display: inline-block" >
         <transition name="fade">
           <img :src="v.src" v-if="v.selected" />
+        </transition>
+        <transition name="fade">
+          <div v-if="v.selected">{{v.name}}</div>
         </transition>
       </div>
     </div>

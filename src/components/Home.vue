@@ -9,7 +9,9 @@
       <td class="ao" :class="v.patient.ao"><AO :room="v" /></td>
       <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.adm.date.format("M/D") : '' }}</td>
       <td class="room-color" :class="v.patient.disc.color"><DiscColor :room="v" @change="put(v)"></DiscColor></td>
-      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.diff(v.patient.adm.date, "days")+'d' : '' }}</td>
+      <td>{{ v.patient.name.first || v.patient.name.last ? v.patient.disc.date.diff(v.patient.adm.date, "days")+'d' : '' }}
+      <!-- {{  v.patient.disc.date.diff(v.patient.adm.date, "days")}} -->
+      </td>
       <td class="rrs" :class="v.patient.rrs"><RRS :room="v" /></td>
       <td class="hlm"><HLM :room="v" /></td>
       <td><StaffSelect :room="v" dept="DR" /></td>
@@ -121,6 +123,14 @@ const sort_time = (l, r, key) => {
   return ll.diff(rr,'seconds') * sort_by.value.asc ;
 }
 
+const sort_elos = (l, r) => {
+  if (!l.patient.name.first && !l.patient.name.last) 
+    return -1 * sort_by.value.asc;
+  if (!r.patient.name.first && !r.patient.name.last)
+    return 1 * sort_by.value.asc;
+  return (l.patient.elos - r.patient.elos) * sort_by.value.asc 
+}
+
 const sort = (v,flip=true) => {
   if (flip) 
   { 
@@ -149,7 +159,8 @@ const sort = (v,flip=true) => {
       data.value.sort((l,r) => sort_time(l,r,'disc'));
       break;
     case 'ELOS':
-      data.value.sort((l,r) => (l.patient.elos - r.patient.elos) * sort_by.value.asc )
+      // data.value.sort((l,r) => (l.patient.elos - r.patient.elos) * sort_by.value.asc )
+      data.value.sort(sort_elos);
       break;
     case 'RRS':
       data.value.sort((l,r) => l.patient.rrs.localeCompare(r.patient.rrs) * sort_by.value.asc )

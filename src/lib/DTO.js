@@ -127,5 +127,6 @@ export class Glyph {
         this.text = '';
         this.fg = 'black';
         this.bg = 'white';
+        this.name = '';
     }
 }

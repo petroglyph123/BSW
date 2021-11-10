@@ -10,9 +10,10 @@ export const draw = (id, icon) => {
   const canvas = document.getElementById(id);
   const ctx = canvas.getContext("2d");
 
-  ctx.font = `900 30px Helvetica`;
-  let length = icon.length = Math.floor(ctx.measureText(icon.text).width);
-  icon.width = length > 100 ? length + 10 : 100;
+  ctx.font = `bold 30px Helvetica`;
+  // let length = Math.floor(ctx.measureText(icon.text).width);
+  icon.length = 100;
+  icon.width = 100;
 
   canvas.width = icon.width;
   ctx.clearRect(0, 0, icon.width, 100);
@@ -37,14 +38,15 @@ export const draw = (id, icon) => {
   ctx.closePath();
   ctx.stroke();
   ctx.beginPath();
-  ctx.font = `900 30px Helvetica`;
+  ctx.font = `bold 30px Helvetica`;
   ctx.fillStyle = icon.fg;
   ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillText(icon.text, icon.width / 2, 50);
+  ctx.textBaseline = icon.type !== 'DC' ? "middle" : "bottom";
+  ctx.fillText(icon.text, icon.width / 2, icon.type !== 'DC' ? 50 : 100, 100);
   ctx.strokeStyle = "black";
+  ctx.strokeStyle = icon.fg;
   ctx.lineWidth = 1;
-  ctx.strokeText(icon.text, icon.width / 2, 50);
+  // ctx.strokeText(icon.text, icon.width / 2, icon.type !== 'DC' ? 50 : 100, 100);
   ctx.closePath();
   icon.src = canvas.toDataURL("image/png");
   return icon;

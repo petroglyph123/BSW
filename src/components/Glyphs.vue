@@ -1,6 +1,10 @@
 <template>
   <div class=image-container>
-    <img v-for="(v, i) in glyphs" :key="i" :src="v.src" @click="go(v)" />
+    <div v-for="(v, i) in glyphs" :key="i" :src="v.src" @click="go(v)" class=tight>
+    <img :src="v.src" @click="go(v)" />
+    <br>
+    {{v.name}}
+    </div>
   </div>
   <br />
   <canvas id="canvas" height="100"></canvas>
@@ -101,5 +105,9 @@ div.flex {
 div.image-container {
   width:80%;
   margin:auto auto;
+}
+div.tight {
+  display: inline-block;
+  margin:.5em .5em;
 }
 </style>

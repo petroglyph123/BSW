@@ -12,7 +12,7 @@
       <img :src="item.src" class="small" />
       <br />
       {{ item.type }} {{ item.text }} {{ item.bg }}j {{ index }}
-      {{ item.length }} {{ item.width }}
+      {{ item.length }} {{ item.width }} {{item.name}}
     </div>
   </div>
 </template>
@@ -23,16 +23,16 @@ import * as db from "../lib/db";
 import * as draw from "../lib/iconMaker";
 import("../css/style.css");
 
-import { defined_icons } from "../assets/icons";
+import { defined_icons3 as defined_icons } from "../assets/icons";
 
 const icons = ref(defined_icons);
 
 const paint = (icon, index) => {
-  let canvas = document.getElementById(`canvas`);
-  let ctx = canvas.getContext("2d");
-  ctx.font = `900 30px Helvetica`;
-  let length = icon.length = Math.floor(ctx.measureText(icon.text).width);
-  icon.width = length > 100 ? length + 10 : 100;
+  // let canvas = document.getElementById(`canvas`);
+  // let ctx = canvas.getContext("2d");
+  // ctx.font = `100 30px Helvetica`;
+  // let length = icon.length = Math.floor(ctx.measureText(icon.text).width);
+  // icon.width = length > 100 ? length + 10 : 100;
   draw(icon, index);
 };
 
