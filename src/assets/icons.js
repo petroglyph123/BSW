@@ -99,7 +99,7 @@ export const defined_icons3 =
         { "type": "ANC", "text": "CCM", "fg": "black", "bg": "#8497B0", "name": "Comp. Care Mgt." },
         { "type": "ANC", "text": "Nutrition", "fg": "black", "bg": "#F8CBAD", "name": "Nutrition" },
         { "type": "ANC", "text": "SPC", "fg": "black", "bg": "#33CCCC", "name": "Pallative Care" },
-        { "type": "DC", "text": "Rehab", "fg": "black", "bg": "#548235", "name": "Rehab" },
+        { "type": "DC", "text": "Rehab", "fg": "black", "bg": "red", "name": "Rehab" },
         { "type": "DC", "text": "SNF", "fg": "black", "bg": "#2F75B5", "name": "SNF" },
         { "type": "DC", "text": "HHC", "fg": "black", "bg": "#FFFF66", "name": "HHC" },
         { "type": "DC", "text": "Home", "fg": "black", "bg": "#92D050", "name": "Home" },
