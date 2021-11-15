@@ -23,26 +23,26 @@ https://github.com/petroglyph123/BSW.git
 	* https://git-scm.com/downloads
 
 3. create working directory
-	cd ~
-	mkdir project
+	* cd ~
+	* mkdir project
 
 4. download glyph program via GIT
-	cd ~/project
-	git clone https://github.com/petroglyph123/BSW.git
+	* cd ~/project
+	* git clone https://github.com/petroglyph123/BSW.git
 
 5. install json-server
-	cd ~/project/BSW
-	npm install json-server
+	* cd ~/project/BSW
+	* npm install json-server
 
 6. edit "Glyph Board" short-cut
-	make sure chrome is in right directory
-	"C:\Program Files\Google\Chrome\Application"
+	* make sure chrome is in right directory
+	* "C:\Program Files\Google\Chrome\Application"
 
 7. edit start.lnk
-	goto property
-	update start in directory to "C:\Users\2012-8MW7H13\project\BSW"
+	* goto property
+	* update start in directory to "C:\Users\2012-8MW7H13\project\BSW"
 
 8. copy startup js
-	"shell:startup"
+	* "shell:startup"
 
 9. copy chrome startup short-cut to desktop
