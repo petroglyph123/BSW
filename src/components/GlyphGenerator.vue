@@ -43,7 +43,7 @@ setTimeout(() => { refresh(); }, 1);
 const save = () => {
   for (let i = 0; i < icons.value.length; i++) {
     let icon = icons.value[i];
-    let item = Object.assign({ id: null }, icon);
+    let item = Object.assign({ id: (i+1) }, icon);
     db.post("glyphs", item);
   }
 };
