@@ -16,11 +16,11 @@ https://git-scm.com/downloads
 https://github.com/petroglyph123/BSW.git
 
 1. download node
-	https://nodejs.org/en/download/
-	window installer (MSI) 64bit
+	* https://nodejs.org/en/download/
+	* window installer (MSI) 64bit
 
 2. download git
-	https://git-scm.com/downloads
+	* https://git-scm.com/downloads
 
 3. create working directory
 	cd ~
