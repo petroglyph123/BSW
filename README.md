@@ -6,14 +6,6 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-https://github.com/petroglyph123/BSW.git
-
-https://nodejs.org/en/download/
-
-https://git-scm.com/downloads
-
-
-https://github.com/petroglyph123/BSW.git
 
 1. download node
 	* https://nodejs.org/en/download/
