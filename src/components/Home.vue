@@ -48,11 +48,11 @@
   </table>
   </div>
   <div class="fontsize">
-    font size {{font_size}}% <input type="range" min="100" max="200" v-model=font_size> 
+    font {{font_size}}% <input type="range" min="100" max="200" v-model=font_size> 
   </div>
-  <!-- <button id=f11 class=f11 @click="toggle_fullscreen">full screen</button> -->
+  <button id=f11 class=f11 @click="toggle_fullscreen">full screen</button>
   <!-- <button id=lock class=lock @click="toggle_screenlock" :class="{locked: lock}">screen {{lock ? "locked" : "unlocked"}}</button> -->
-  <div class=f11>Toggle Full Screen F11</div>
+  <!-- <div class=f11>Toggle Full Screen F11</div> -->
   <ScreenLock v-if=lock @close="lock=false" />
 </template>
 
@@ -226,8 +226,8 @@ table.bottom td {
 }
 button.f11 {
   position:fixed;
-  bottom:1em;
-  right:1em;
+  bottom:0em;
+  right:0em;
 }
 button.lock {
   position: fixed;

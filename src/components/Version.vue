@@ -1,5 +1,9 @@
 <template>
   <div class="comments">
+    <h2>2011-11-23</h2>
+    <h3>Joe Anderson</h3>
+    <li>fullscreen button</li>
+    <li>keyboard button</li>
     <h2>2011-11-04</h2>
     <h3>Pat C.</h3>
     <li>add APP</li>
